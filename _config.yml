@@ -6,7 +6,8 @@ permalink:           pretty
 # Setup
 title:               Things on a Heap
 tagline:             A Collection of Programming Ramblings by chjdev
-url:                 http://chjdev.com
+url:                 https://chjdev.com
+enforce_ssl:         chjdev.com
 paginate:            1
 baseurl:             ""
 gems:                [jekyll-paginate, jekyll-gist]
