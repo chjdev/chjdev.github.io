@@ -1,0 +1,30 @@
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+
+# Setup
+title:               Things on a Heap
+tagline:             A Collection of Programming Ramblings by <i>chjdev</i>
+url:                 http://chjdev.com
+paginate:            1
+baseurl:             ""
+gems:                [jekyll-paginate, jekyll-gist]
+
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  sass_dir:          _sass
+  style:            :compressed
+
+# About/contact
+author:
+  name:              Christian Junker
+  url:               https://twitter.com/chjdev
+  email:             chjdev@gmail.com
+
+pages_list:       
+    About: '/about'
+    Archive: '/archive'
+    Feed: '/atom.xml'
