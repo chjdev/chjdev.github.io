@@ -5,6 +5,31 @@
 
 .page,
 .post {
+  -webkit-column-gap: 1.6rem; /* Chrome, Safari, Opera */
+  -moz-column-gap: 1.6rem; /* Firefox */
+  column-gap: 1.6rem;
+
+  -webkit-column-count: 2; /* Chrome, Safari, Opera */
+  -moz-column-count: 2; /* Firefox */
+  column-count: 2;
+  @media(max-width: 55rem) {
+    -webkit-column-count: 1; /* Chrome, Safari, Opera */
+    -moz-column-count: 1; /* Firefox */
+    column-count: 1;
+  }
+  @media(min-width: 1620px) {
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+  }
+  @media(min-width: 1920px) {
+    -webkit-column-count: 4; /* Chrome, Safari, Opera */
+    -moz-column-count: 4; /* Firefox */
+    column-count: 4;
+  }
+  text-align: justify;
+  text-justify: kashida;
+
   margin-bottom: 4em;
 }
 
