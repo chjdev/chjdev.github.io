@@ -8,7 +8,7 @@ url:                 https://chjdev.com
 enforce_ssl:         chjdev.com
 paginate:            6
 baseurl:             ""
-gems:                [jekyll-paginate, jekyll-gist, jekyll-redirect-from]
+gems:                [github-pages, jekyll-paginate, jekyll-gist, jekyll-redirect-from]
 
 # Assets
 #
