@@ -1,7 +1,7 @@
 ---
-layout: post
 title: Universal Python Server
-redirect_from: "/universal-python-server"
+layout: post
+redirect_from: /universal-python-server
 ---
 
 I recently read a cool post by [Joe Armstrong](https://joearms.github.io/) in
