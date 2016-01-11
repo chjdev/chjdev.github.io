@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Universal Python Server
+alias: /universal-python-server
 ---
 
 I recently read a cool post by [Joe Armstrong](https://joearms.github.io/) in
