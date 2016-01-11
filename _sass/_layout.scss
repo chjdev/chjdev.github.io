@@ -3,7 +3,7 @@
 // Styles for managing the structural hierarchy of the site.
 
 .container {
-  max-width: 65%;
+  max-width: 55rem;
   padding-left:  1.5rem;
   padding-right: 1.5rem;
   margin-left:  auto;
@@ -13,6 +13,9 @@
 //  -moz-box-shadow:0px 5px 10px #1c1c1c;
   box-shadow: 5px 5px 5px #bbb;
 
+  @media (min-width: 1920px) {
+    max-width: 90rem;
+  }
 }
 
 footer {
