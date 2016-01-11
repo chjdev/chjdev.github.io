@@ -8,7 +8,7 @@ title:               Things on a Heap
 tagline:             A Collection of Programming Ramblings by chjdev
 url:                 https://chjdev.com
 enforce_ssl:         chjdev.com
-paginate:            1
+paginate:            6
 baseurl:             ""
 gems:                [jekyll-paginate, jekyll-gist]
 

@@ -5,6 +5,11 @@
 
 .page,
 .post {
+  margin-bottom: 4em;
+}
+
+.post,
+.posts {
   -webkit-column-gap: 1.6rem; /* Chrome, Safari, Opera */
   -moz-column-gap: 1.6rem; /* Firefox */
   column-gap: 1.6rem;
@@ -17,20 +22,26 @@
     -moz-column-count: 1; /* Firefox */
     column-count: 1;
   }
-  @media(min-width: 1620px) {
+  @media(min-width: 95rem) {
     -webkit-column-count: 3; /* Chrome, Safari, Opera */
     -moz-column-count: 3; /* Firefox */
     column-count: 3;
   }
-  @media(min-width: 1920px) {
+  @media(min-width: 125rem) {
     -webkit-column-count: 4; /* Chrome, Safari, Opera */
     -moz-column-count: 4; /* Firefox */
     column-count: 4;
   }
   text-align: justify;
-  text-justify: kashida;
+}
 
-  margin-bottom: 4em;
+.post-cram {
+  -webkit-column-count: 1; /* Chrome, Safari, Opera */
+  -moz-column-count: 1; /* Firefox */
+  column-count: 1;
+  -webkit-column-break-inside: avoid; /* Chrome, Safari */
+  page-break-inside: avoid;           /* Theoretically FF 20+ */
+  break-inside: avoid-column;         /* IE 11 */
 }
 
 // Blog post or page title
