@@ -13,11 +13,11 @@
   -moz-box-shadow:5px 5px 5px #bbb;
   box-shadow: 5px 5px 5px #bbb;
 
-  @media (min-width: 95rem) {
-    max-width: 90rem;
+  @media (min-width: 1280px) {
+    max-width: 1260px;
   }
-  @media (min-width: 125rem) {
-    max-width: 120rem;
+  @media (min-width: 1600px) {
+    max-width: 1580px;
   }
 
 }
