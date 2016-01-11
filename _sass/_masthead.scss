@@ -3,7 +3,10 @@
 // Super small header above the content for site name and short description.
 
 .masthead {
-margin: 1.2em 0 1.4em 0;
+  margin: 1.8rem 0 2rem 0;
+  @media(max-width: 55rem) {
+     margin: 0;
+  }
   padding-top: 1.2em;
   padding-bottom: 1.4em;
   display: table;
