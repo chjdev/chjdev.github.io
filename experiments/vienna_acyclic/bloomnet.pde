@@ -1,3 +1,6 @@
+// abandon all hope, ye who travel here
+// this code is super experimental and hacky
+
 // Global variables
 float radius;
 // The scale of our world
