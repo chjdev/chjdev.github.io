@@ -37,7 +37,7 @@ communication channels. Both the ``worker`` - as well as the
 ``boss`` processes connect to it for discovery.
 
 
-```python
+{% highlight python %}
 from multiprocessing.managers import SyncManager
 import marshal
 import os
@@ -72,7 +72,7 @@ if __name__ == '__main__':
     manager = Manager(address=('', 1234), authkey=b'abc')
     print('Manager startet with PID=', os.getpid())
     manager.get_server().serve_forever()
-```
+{% endhighlight %}
 
 
 The first thing that's necessary is to create our own subclass of the
@@ -116,7 +116,7 @@ getting tasks from the job queue, reconstructing the function of the task,
 invoking this new function and putting its result into the result queue.
 
 
-```python
+{% highlight python %}
 from manager import connect
 import marshal
 import types
@@ -134,7 +134,7 @@ if __name__ == '__main__':
     manager = connect('127.0.0.1', 1234, b'abc')
     print('Worker started with PID=', os.getpid())
     universal(manager.get_job_q(), manager.get_res_q())
-```
+{% endhighlight %}
 
 
 The ``universal`` function is the main driver. It takes the job - and result
@@ -153,7 +153,7 @@ Now this setup can be put to use for arbitrary tasks, for example here is a
 boss that schedules the calculation of factorials.
 
 
-```python
+{% highlight python %}
 from manager import remote, connect
 import os
 
@@ -172,7 +172,7 @@ if __name__ == '__main__':
         remote(factorial, manager)(num)
     for _ in inputs:
         print(manager.get_res_q().get())
-```
+{% endhighlight %}
 
 
 As can be seen the factorial function is a completely normal function. If the
@@ -185,7 +185,7 @@ With this boss the workers will be turned into socket servers that can handle
 requests on their own!
 
 
-```python
+{% highlight python %}
 from manager import connect, remote
 import os
 
@@ -217,7 +217,7 @@ if __name__ == '__main__':
     remote(server, manager)(5002)
     print(manager.get_res_q().get())
     print(manager.get_res_q().get())
-```
+{% endhighlight %}
 
 
 Note: the import in the function is necessary, for it to be reconstructable in the remote process
