@@ -15,7 +15,7 @@ This little program "suitable for a 10min talk" highlights how awesomely simple
 Erlang can be for the tasks it was designed to do best. I was intrigued and
 wanted to see if a comparably simple universal Python server could be created
 by using only the standard library.
-<!--more-->
+
 To make the program distributable the [multiprocessing](https://docs.python.org/3/library/multiprocessing.html)
 module of the standard library will be used. It contains the tools necessary
 for creating multiple processes and inter process communication.
@@ -36,7 +36,8 @@ First here is the ``manager`` service. It's responsible to provide the
 communication channels. Both the ``worker`` - as well as the
 ``boss`` processes connect to it for discovery.
 
-{% highlight python %}
+
+```python
 from multiprocessing.managers import SyncManager
 import marshal
 import os
@@ -69,9 +70,10 @@ if __name__ == '__main__':
     Manager.register('get_res_q', callable=lambda: res_q)
 
     manager = Manager(address=('', 1234), authkey=b'abc')
-    print(&quot;Manager startet with PID=&quot;, os.getpid())
+    print('Manager startet with PID=', os.getpid())
     manager.get_server().serve_forever()
-{% endhighlight %}
+```
+
 
 The first thing that's necessary is to create our own subclass of the
 [SyncManager](https://docs.python.org/3/library/multiprocessing.html#multiprocessing.managers.SyncManager)
@@ -114,7 +116,7 @@ getting tasks from the job queue, reconstructing the function of the task,
 invoking this new function and putting its result into the result queue.
 
 
-{% highlight python %}
+```python
 from manager import connect
 import marshal
 import types
@@ -125,14 +127,15 @@ def universal(job_q, res_q):
         funcs, args, kwargs = job_q.get()
         func_code = marshal.loads(funcs)
         func = types.FunctionType(func_code, globals(), 'loaded_func')
-        print(&quot;processing &quot;, func, args, kwargs)
+        print('processing ', func, args, kwargs)
         res_q.put((os.getpid(), func(*args, **kwargs)))
 
 if __name__ == '__main__':
     manager = connect('127.0.0.1', 1234, b'abc')
-    print(&quot;Worker started with PID=&quot;, os.getpid())
+    print('Worker started with PID=', os.getpid())
     universal(manager.get_job_q(), manager.get_res_q())
-{% endhighlight %}
+```
+
 
 The ``universal`` function is the main driver. It takes the job - and result
 queue as arguments. As stated above the job queue contains triplets with the
@@ -149,26 +152,28 @@ then enters the ``universal`` function.
 Now this setup can be put to use for arbitrary tasks, for example here is a
 boss that schedules the calculation of factorials.
 
-{% highlight python %}
+
+```python
 from manager import remote, connect
 import os
 
 def factorial(n):
     res = 1
-    while n &gt; 1:
+    while n > 1:
         res, n = res * n, n - 1
     return res
 
 if __name__ == '__main__':
     manager = connect('127.0.0.1', 1234, b'abc')
-    print(&quot;Factorial started with PID=&quot;, os.getpid())
+    print('Factorial started with PID=', os.getpid())
 
     inputs = range(1, 10)
     for num in inputs:
         remote(factorial, manager)(num)
     for _ in inputs:
         print(manager.get_res_q().get())
-{% endhighlight %}
+```
+
 
 As can be seen the factorial function is a completely normal function. If the
 boss is run, it again connects to a running manager and then uses the
@@ -179,7 +184,8 @@ This is arguably a pretty simple example, so here is something a bit cooler.
 With this boss the workers will be turned into socket servers that can handle
 requests on their own!
 
-{% highlight python %}
+
+```python
 from manager import connect, remote
 import os
 
@@ -192,26 +198,27 @@ def server(port):
     s.bind((host,port))
     s.listen(backlog)
     done = False
-    print(&quot;start serving&quot;)
+    print('start serving')
     while not done:
         client, address = s.accept()
         data = client.recv(size)
         if data:
             client.send(data)
         client.close()
-        done = data.decode().strip() == &quot;QUIT&quot;
-    print(&quot;done serving&quot;)
+        done = data.decode().strip() == 'QUIT'
+    print('done serving')
     return port
 
 if __name__ == '__main__':
     manager = connect('127.0.0.1', 1234, b'abc')
-    print(&quot;Echo started with PID=&quot;, os.getpid())
+    print('Echo started with PID=', os.getpid())
 
     remote(server, manager)(5001)
     remote(server, manager)(5002)
     print(manager.get_res_q().get())
     print(manager.get_res_q().get())
-{% endhighlight %}
+```
+
 
 Note: the import in the function is necessary, for it to be reconstructable in the remote process
 
