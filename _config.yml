@@ -8,7 +8,14 @@ url:                 https://chjdev.com
 enforce_ssl:         chjdev.com
 paginate:            6
 baseurl:             ""
-gems:                [github-pages, jekyll-paginate, jekyll-gist, jekyll-redirect-from]
+gems:                [jekyll-paginate, jekyll-gist, jekyll-redirect-from]
+#github-pages
+#markdown: redcarpet
+#redcarpet:
+#  extensions: ["tables", "fenced_code_blocks"]
+kramdown:
+  input: GFM
+  hard_wrap: false
 
 # Assets
 #
@@ -24,6 +31,6 @@ author:
   email:             chjdev@gmail.com
 
 pages_list:       
-    About: '/about'
-    Archive: '/archive'
-    Feed: '/atom.xml'
+  About: '/about'
+  Archive: '/archive'
+  Feed: '/atom.xml'
