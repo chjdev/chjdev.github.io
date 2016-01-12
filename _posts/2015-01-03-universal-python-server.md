@@ -42,25 +42,21 @@ from multiprocessing.managers import SyncManager
 import marshal
 import os
 
-
 class Manager(SyncManager):
     pass
 
 Manager.register('get_job_q')
 Manager.register('get_res_q')
 
-
 def connect(ip, port, auth):
     manager = Manager(address=(ip, port), authkey=auth)
     manager.connect()
     return manager
 
-
 def remote(func, manager):
     def inner(*args, **kwargs):
         manager.get_job_q().put((marshal.dumps(func.__code__), args, kwargs))
     return inner
-
 
 if __name__ == '__main__':
     from multiprocessing import Queue
@@ -68,7 +64,6 @@ if __name__ == '__main__':
     res_q = Queue()
     Manager.register('get_job_q', callable=lambda: job_q)
     Manager.register('get_res_q', callable=lambda: res_q)
-
     manager = Manager(address=('', 1234), authkey=b'abc')
     print('Manager startet with PID=', os.getpid())
     manager.get_server().serve_forever()
