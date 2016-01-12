@@ -20,7 +20,7 @@ To make the program distributable the [multiprocessing](https://docs.python.org/
 module of the standard library will be used. It contains the tools necessary
 for creating multiple processes and inter process communication.
 
-# Architecture
+## Architecture
 This version deviates a little bit from Armstrong's program. Instead of a
 ``become`` message, here the function to be performed is included for
 every task to be performed. It is implemented using 3 components: a
@@ -31,7 +31,7 @@ schedule said tasks.
 Disclaimer: Obviously this is only a simple little experiment, none of this
 code is intended to be used in anything respectable.
 
-## Manager
+#### Manager
 First here is the ``manager`` service. It's responsible to provide the
 communication channels. Both the ``worker`` - as well as the
 ``boss`` processes connect to it for discovery.
@@ -110,7 +110,7 @@ Finally running the manager script will initiate the
 used for communicating and reregister them. Then a manager object is created
 and instructed to serve forever.
 
-## Worker
+#### Worker
 The worker process will perform the tasks scheduled by the boss. It works by
 getting tasks from the job queue, reconstructing the function of the task,
 invoking this new function and putting its result into the result queue.
@@ -148,7 +148,7 @@ is put into the result queue.
 When the script is run, it joins the specified manager using ``connect`` and
 then enters the ``universal`` function. 
 
-## Boss
+#### Boss
 Now this setup can be put to use for arbitrary tasks, for example here is a
 boss that schedules the calculation of factorials.
 
@@ -227,7 +227,7 @@ universal servers you basically can build a simple cluster environment that can
 compute anything. Not only that, it can be dynamically patched with arbitrary
 new behavior without the need for a restart.
 
-# Conclusion
+## Conclusion
 As you can see, implementing the universal server in Python is quite a bit more
 involved than it is in Erlang, but that is understandable because it wasn't
 specifically designed with this problem in mind. That being said, it is still
