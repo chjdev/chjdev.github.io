@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/d3.geo.projection.v0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.4.16/processing.js"></script>
+
+<canvas id="bloomnet" data-processing-sources="bloomnet.pde"></canvas>
+<script type="application/javascript">
+var config = { width: 4096
+             , height: 4096
+             , aspect: this.width/this.height
+             };
+var projection = d3.geo.azimuthalEquidistant().scale(2048*30).translate([config.width/2,config.height/2]).center([16.37, 48.20]);
+
+function parse_id(d) {
+    var lon = +((d / 100000) / 100).toFixed(2) - 180;
+    var lat = +((d % 100000) / 100).toFixed(2) - 180;
+    return [lon, lat];
+}
+
+var graph = {"vertices":[], "edges":[]};
+d3.json("output_acyclic_vienna.json", function(error, json_graph) {
+        var processingInstance = Processing.getInstanceById('bloomnet');
+        graph = json_graph;
+        processingInstance.redraw();
+});
+</script>
+
+</body>
+</html>
