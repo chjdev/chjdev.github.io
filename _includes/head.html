@@ -44,8 +44,6 @@
   {% endif %}
   {% if page.description %}
     <meta name="twitter:description" content="{{ page.description }}">
-  {% elseif post.excerpt %}
-    <meta name="twitter:description" content="{{ post.excerpt }}">
   {% else %}
     <meta name="twitter:description" content="{{ site.description }}">
   {% endif %}
