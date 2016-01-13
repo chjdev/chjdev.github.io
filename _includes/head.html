@@ -32,7 +32,7 @@
   <meta property="fb:admins" content="100001116378059" />
 
   <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
-  <meta name="og:url" content="{{ site.url }}{{ page.url }}" />
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
   <meta name="twitter:url" content="{{ site.url }}{{ page.url }}" />
 
   <meta property="og:type" content="blog" />
@@ -53,11 +53,11 @@
 
   {% if page.description %}
     <meta name="description" content="{{ page.description }}" />
-    <meta name="og:description" content="{{ page.description }}" />
+    <meta property="og:description" content="{{ page.description }}" />
     <meta name="twitter:description" content="{{ page.description }}" />
   {% else %}
     <meta name="description" content="{{ site.description }}" />
-    <meta name="og:description" content="{{ site.description }}" />
+    <meta property="og:description" content="{{ site.description }}" />
     <meta name="twitter:description" content="{{ site.description }}" />
   {% endif %}
 
@@ -65,7 +65,7 @@
     <meta property="og:image" content="{{ site.url }}{{ page.image }}" />
     <meta name="twitter:image:src" content="{{ site.url }}{{ page.image }}" />
   {% else %}
-    <meta name="og:image" content="{{ site.url }}/assets/logo.png" />
+    <meta property="og:image" content="{{ site.url }}/assets/logo.png" />
     <meta name="twitter:image:src" content="{{ site.url }}/assets/logo.png" />
   {% endif %}
 
