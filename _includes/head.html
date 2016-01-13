@@ -34,6 +34,9 @@
   <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
   <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
   <meta name="twitter:url" content="{{ site.url }}{{ page.url }}" />
+  {% if page.redirect_from %}
+    <link rel="alternate" href="{{ site.url }}{{ page.redirect_from }}" />
+  {% endif %}
 
   <meta property="og:type" content="blog" />
 
