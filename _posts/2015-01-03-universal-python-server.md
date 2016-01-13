@@ -1,6 +1,7 @@
 ---
 title: Universal Python Server
 layout: post
+description: The program creates an easily distributable generic server, that can perform any concrete task you tell it to by sending it a function.
 redirect_from: /universal-python-server/
 ---
 

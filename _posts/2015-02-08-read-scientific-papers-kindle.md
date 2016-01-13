@@ -1,6 +1,7 @@
 ---
 title: Read Scientific Papers on Your Kindle
 layout: post
+description: In this post I show you a simple way to get these papers on your eBook reader for comfortable reading.
 redirect_from: /read-scientific-papers-kindle/
 ---
 
