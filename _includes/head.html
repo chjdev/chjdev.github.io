@@ -26,6 +26,34 @@
   <!-- canonical -->
   <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
 
+  <!-- twitter -->
+  <meta name="twitter:site" content="@chjdev">
+  <meta name="twitter:creator" content="@chjdev">
+  {% if page.card_type %}
+    <meta name="twitter:card" content="{{ page.card_type }}">
+  {% else %}
+    <meta name="twitter:card" content="summary">
+  {% endif %}
+    {% if page.title %}
+    <meta name="twitter:title" content="{{ page.title }}">
+  {% else %}
+    <meta name="twitter:title" content="{{ site.title }}">
+  {% endif %}
+  {% if page.url %}
+    <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+  {% endif %}
+  {% if page.description %}
+    <meta name="twitter:description" content="{{ page.description }}">
+  {% else %}
+    <meta name="twitter:description" content="{{ site.description }}">
+  {% endif %}
+  {% if page.image %}
+    <meta name="twitter:image:src" content="{{ site.url }}{{ page.image }}">
+  {% else %}
+    <meta name="twitter:image:src" content="{{ site.url }}/assets/logo.png">
+  {% endif %}
+
+
   <!-- Google Analytics -->
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
