@@ -89,7 +89,7 @@
     "datePublished" : "{{ site.time | date_to_xmlschema }}",
   {% endif %}
   {% if page.image %}
-    "image" : "{{ site.url }}{{ page.image }},
+    "image" : "{{ site.url }}{{ page.image }}",
   {% else %}
     "image" : "{{ site.url }}/assets/logo.png",
   {% endif %}
@@ -97,6 +97,7 @@
     "publisher" : {
       "@type" : "Organization",
       "name" : "chjdev"
+      "logo" : "{{ site.url }}/assets/logo.png",
     }
   }
   </script>
