@@ -69,6 +69,37 @@
     <meta name="twitter:image:src" content="{{ site.url }}/assets/logo.png">
   {% endif %}
 
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context" : "http://schema.org",
+    "@type" : "Article",
+  {% if page.title %}
+    "name" : "{{ page.title }}",
+  {% else %}
+    "name" : "{{ site.title }}",
+  {% endif %}
+    "author" : {
+      "@type" : "Person",
+      "name" : "Christian Junker"
+    },
+  {% if page.date %}
+    "datePublished" : "{{ page.date | date_to_xmlschema }}",
+  {% else %}
+    "datePublished" : "{{ site.time | date_to_xmlschema }}",
+  {% endif %}
+  {% if page.image %}
+    "image" : "{{ site.url }}{{ page.image }},
+  {% else %}
+    "image" : "{{ site.url }}/assets/logo.png",
+  {% endif %}
+    "url" : "{{ site.url }}{{ page.url }}",
+    "publisher" : {
+      "@type" : "Organization",
+      "name" : "chjdev"
+    }
+  }
+  </script>
 
   <!-- Google Analytics -->
   <script>
