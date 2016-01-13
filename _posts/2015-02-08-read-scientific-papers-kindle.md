@@ -12,6 +12,7 @@ src="http://chjdev.com/wp-content/uploads/2015/02/original-232x300.png"
 alt="original" width="232" height="300" class="alignnone size-medium
 wp-image-153" /></a></div>
 -->
+
 Reading scientific on your Kindle (or other eBook
 reader) usually sucks. The text is normally only available as PDF or PS files
 and formatted in a way that is meant for printing in A4, or US Letter. A
