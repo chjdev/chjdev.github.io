@@ -14,7 +14,7 @@ wp-image-153" /></a></div>
 -->
 
 Reading scientific on your Kindle (or other eBook
-reader) usually sucks. The text is normally only available as PDF or PS files
+reader) usually sucks. The text is usually only available as PDF or PS files
 and formatted in a way that is meant for printing in A4, or US Letter. A
 two-column layout is also very common, which further complicates things. In
 this post I show you a simple way to get these papers on your eBook reader for
