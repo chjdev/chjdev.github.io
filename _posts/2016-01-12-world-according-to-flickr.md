@@ -2,10 +2,10 @@
 title: The World according to Flickr
 layout: post
 description: Constructing and rendering a global network based on public Flickr data.
-image: /experiments/vienna_acyclic/vienna_acyclic-contrast-wide-1920.png
+image: /experiments/vienna_acyclic/vienna_acyclic-contrast-wide-1024.png
 ---
 
-<img src='/experiments/vienna_acyclic/world_flickr.png' />
+[<img src='/experiments/vienna_acyclic/world_flickr.png'/>](/experiments/vienna_acyclic/world_flickr.png)
 
 Part of project proposal I'm working on currently is the network
 (re)construction of geographical locations. For a first experiment I used a
@@ -69,5 +69,6 @@ where drawn as translucent arcs with weighted line width that highlight highly
 connected vertices via overlapping. The final renderings are based on ~170.000
 vertices and over 4 million edges.
 
-<img src='/experiments/vienna_acyclic/vienna_acyclic-contrast-wide-1920.png' />
+[<img src='/experiments/vienna_acyclic/vienna_acyclic-contrast-wide-1920.png' class="bg-image" />](/experiments/vienna_acyclic/vienna_acyclic-contrast-wide-1920.png)
+
 
