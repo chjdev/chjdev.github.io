@@ -11,6 +11,7 @@ and formatted in a way that is meant for printing in A4, or US Letter. A
 two-column layout is also very common, which further complicates things. In
 this post I show you a simple way to get these papers on your eBook reader for
 comfortable reading.
+
 <!--
 <div style="text-align: center;"><a
 href="http://chjdev.com/wp-content/uploads/2015/02/original.png"><img
