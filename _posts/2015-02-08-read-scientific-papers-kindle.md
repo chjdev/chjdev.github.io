@@ -18,9 +18,7 @@ href="http://chjdev.com/wp-content/uploads/2015/02/original.png"><img
 src="http://chjdev.com/wp-content/uploads/2015/02/original-232x300.png"
 alt="original" width="232" height="300" class="alignnone size-medium
 wp-image-153" /></a></div>
--->
 
-<!--
 <div style="text-align: center;"><iframe style="width: 120px; height: 240px;"
 src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&amp;OneJS=1&amp;Operation=GetAdHtml&amp;MarketPlace=US&amp;source=ss&amp;ref=ss_til&amp;ad_type=product_link&amp;tracking_id=chjdev-20&amp;marketplace=amazon&amp;region=US&amp;placement=B00I15SB16&amp;asins=B00I15SB16&amp;linkId=SPXKVXHNXUMSCTRA&amp;show_border=true&amp;link_opens_in_new_window=true"
 width="300" height="150" frameborder="0" marginwidth="0" marginheight="0"
