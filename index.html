@@ -6,8 +6,7 @@ title: Home
 <div class="posts">
   {% for post in paginator.posts %}
   <article class="post post-cram">
-    <a href="{{ site.baseurl }}{{ post.url }}">
-    <h1 class="post-title">{{ post.title }}</h1>
+    <h1 class="post-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
     <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time>
 
     {% if post.image %}
@@ -15,7 +14,6 @@ title: Home
     {% else %}
       {{ post.excerpt }}
     {% endif %}
-    </a>
   </article>
   {% endfor %}
 </div>
