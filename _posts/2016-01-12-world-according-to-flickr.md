@@ -20,7 +20,7 @@ preprocessing of these files and converted it into a GraphX graph.
 * Locations are less then 10 degree apart
 
 {% highlight scala %}
-val geoTripletsFast = flickrRowsWithGeo
+val geoTriplets = flickrRowsWithGeo
   .map(frow => (frow.user, List(makeVIdx(frow.latitude.get, frow.longitude.get))))
   // build a that contains all localities for the user, e.g. (christian, [Innsbruck, Vancouver, Montanita, ...])
   .reduceByKey((a, b) => a ++ b)
@@ -41,18 +41,16 @@ val geoTripletsFast = flickrRowsWithGeo
   // we only keep edges with a weight > 1 meaning more than 2 person visited both
   .filter(_._2 > 2)
 
-
-
-def verticesFast(): RDD[(VertexId, Unit)] = {
-  geoTripletsFast.map(_._1).union(geoTripletsFast.map(_._3)).distinct().map((_, ()))
+def vertices(): RDD[(VertexId, Unit)] = {
+  geoTriplets.map(_._1).union(geoTriplets.map(_._3)).distinct().map((_, ()))
 }
 
-def edgesFast(): RDD[Edge[Int]] = {
-  geoTripletsFast.map(triplet => Edge(triplet._1, triplet._3, triplet._2))
+def edges(): RDD[Edge[Int]] = {
+  geoTriplets.map(triplet => Edge(triplet._1, triplet._3, triplet._2))
 }
 
 def main(args: Array[String]): Unit = {
-  val graph = Graph(verticesFast(), edgesFast())
+  val graph = Graph(vertices(), edges())
     graph.vertices.map(_._1.toString).saveAsTextFile("/path/to/out_vertices")
     graph.triplets.map(triplet => List(triplet.srcId, triplet.dstId, triplet.attr).map(_.toString)).saveAsTextFile("/path/to/out_edges")
 }
@@ -60,13 +58,13 @@ def main(args: Array[String]): Unit = {
 
 Using Spark the resulting vertices and edges where written to disk and
 transformed to a JSON object holding these values. Using d3.js (world
-rendering) and processing.js (BFS rendering) this JSON object was loaded and
-the network projected onto a Miller and azimuthal projection respectively.
-Vertices where drawn as translucent circles whose overlap creates different
-color intensities on the map according to the popularity of the location. Edges
-where drawn as translucent arcs with weighted line width that highlight highly
-connected vertices via overlapping. The final renderings are based on ~170.000
-vertices and over 4 million edges.
+rendering, top) and processing.js (BFS rendering with starting point Vienna,
+bottom) this JSON object was loaded and the network projected onto a Miller and
+azimuthal projection respectively.  Vertices where drawn as translucent circles
+whose overlap creates different color intensities on the map according to the
+popularity of the location. Edges where drawn as translucent arcs with weighted
+line width that highlight highly connected vertices via overlapping. The final
+renderings are based on ~170.000 vertices and over 4 million edges.
 
 [<img src='/experiments/vienna_acyclic/vienna_acyclic-contrast-wide-1920.png' class="bg-image" />](/experiments/vienna_acyclic/vienna_acyclic-contrast-wide-1920.png)
 
