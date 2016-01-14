@@ -66,6 +66,6 @@ popularity of the location. Edges where drawn as translucent arcs with weighted
 line width that highlight highly connected vertices via overlapping. The final
 renderings are based on ~170.000 vertices and over 4 million edges.
 
-[<img src='/experiments/vienna_acyclic/vienna_acyclic-contrast-wide-1920.png' class="bg-image" />](/experiments/vienna_acyclic/vienna_acyclic-contrast-wide-1920.png)
+[<img src='/experiments/vienna_acyclic/vienna_acyclic-contrast-wide-768.png' class="bg-image" />](/experiments/vienna_acyclic/vienna_acyclic-contrast-wide-1920.png)
 
 
