@@ -11,11 +11,11 @@ Part of project proposal I'm working on currently is the network
 (re)construction of geographical locations. For a first experiment I used a
 publicly available data set provided by Flickr that contains 100 million
 photos of which 49 million are geotagged. It can be found [here](http://yahoolabs.tumblr.com/post/89783581601/one-hundred-million-creative-commons-flickr-images). The dataset consists of 10 TSV files holding the information (like id,
-geotag, user, etc.) of 100.000 photos each. I used Apache Spark for the
-preprocessing of these files and converted it into a GraphX graph.
+geotag, user, etc.) of 100.000 photos each.
 
-* Edge between locations if at least 3 persons visited both
-* Locations are less then 10 degree apart
+I used Apache Spark for the preprocessing of these files and converted it into
+a GraphX graph.  An Edge between locations exists if at least 3 persons visited
+both and locations are less then 10 degree apart.
 
 {% highlight scala %}
 val geoTriplets = flickrRowsWithGeo
