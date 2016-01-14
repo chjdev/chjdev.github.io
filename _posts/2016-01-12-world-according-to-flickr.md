@@ -14,7 +14,7 @@ photos of which 49 million are geotagged. It can be found [here](http://yahoolab
 geotag, user, etc.) of 100.000 photos each.
 
 I used Apache Spark for the preprocessing of these files and converted it into
-a GraphX graph.  An Edge between locations exists if at least 3 persons visited
+a GraphX graph.  An Edge between locations exists if at least 2 persons visited
 both and locations are less then 10 degree apart.
 
 {% highlight scala %}
