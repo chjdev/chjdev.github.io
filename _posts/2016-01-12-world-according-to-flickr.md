@@ -2,7 +2,7 @@
 title: The World according to Flickr
 layout: post
 description: Constructing and rendering a global network based on public Flickr data.
-card_type: summary_large_image
+card_type: photo
 image: /experiments/vienna_acyclic/vienna_acyclic-contrast-wide-1024.png
 ---
 
