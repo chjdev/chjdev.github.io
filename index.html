@@ -10,7 +10,7 @@ title: Home
     <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time>
 
     {% if post.image %}
-      <img src="{{ post.image }}" style="width:100%;" />
+      <img src="{{ post.image }}" style="width:95%;margin:auto;" />
     {% else %}
       {{ post.excerpt }}
     {% endif %}
