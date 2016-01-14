@@ -16,8 +16,6 @@ The dataset consists of 10 TSV files holding the information (like id,
 geotag, user, etc.) of 100.000 photos each. I used Apache Spark for the
 preprocessing of these files and converted it into a GraphX graph.
 
-The constraints used where:
-
 * Edge between locations if at least 3 persons visited both
 * Locations are less then 10 degree apart
 
