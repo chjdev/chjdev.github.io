@@ -5,13 +5,13 @@
   -moz-column-span: all; /* Firefox */
   column-span: all;
   margin: auto;
-  margin-top: 1.7em;
-  margin-bottom: 1.7em;
+  margin-top: 1.7rem;
+  margin-bottom: 1.7rem;
 }
 
 .page,
 .post {
-  margin-bottom: 4em;
+  margin-bottom: 2rem;
 }
 
 .post,
@@ -45,10 +45,6 @@
   -webkit-column-count: 1; /* Chrome, Safari, Opera */
   -moz-column-count: 1; /* Firefox */
   column-count: 1;
-  -webkit-column-break-inside: avoid; /* Chrome, Safari */
-  page-break-inside: avoid;           /* Theoretically FF 20+ */
-  break-inside: avoid-column;         /* IE 11 */
-  display: table;                     /* really FF 20+ */
 }
 
 // Blog post or page title
