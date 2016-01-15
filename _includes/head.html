@@ -92,15 +92,9 @@
     "datePublished" : "{{ site.time | date_to_xmlschema }}",
   {% endif %}
   {% if page.image %}
-    "image" : {
-      "@type": "ImageObject",
-      "url": "{{ site.url }}{{ page.image }}"
-    },
+    "image" : "{{ site.url }}{{ page.image }}",
   {% else %}
-    "image" : {
-      "@type": "ImageObject",
-      "url": "{{ site.url }}/assets/logo.png"
-    },
+    "image" : "{{ site.url }}/assets/logo.png",
   {% endif %}
     "url" : "{{ site.url }}{{ page.url }}",
     "publisher" : {
