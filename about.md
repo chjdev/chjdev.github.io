@@ -10,7 +10,7 @@ title: About
   "name": "Christian Junker",
   "honorificSuffix": "M.Sc.",
   "gender": "male",
-  "jobTitle": "Researcher"
+  "jobTitle": "Researcher",
   "workLocation": "Innsbruck",
   "url": "https://chjdev.com",
   "image": "{{ site.url }}/assets/portrait.png",
