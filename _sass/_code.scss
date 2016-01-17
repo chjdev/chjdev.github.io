@@ -3,6 +3,11 @@
 // Inline and block-level code snippets. Includes tweaks to syntax highlighted
 // snippets from Pygments/Rouge and Gist embeds.
 
+pre {
+  white-space: pre;
+  overflow: auto;
+}
+
 code,
 pre {
   font-family: Menlo, Monaco, "Courier New", monospace;
