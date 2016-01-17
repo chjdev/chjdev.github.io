@@ -1,7 +1,7 @@
 ---
 title: What's a Decision Tree?
 card_type: photo
-image: assets/2016/01/decision_tree.png
+image: /assets/2016/01/decision_tree.png
 description: In this post I'll explain Decision Trees using JavaScript.
 layout: post
 ---
