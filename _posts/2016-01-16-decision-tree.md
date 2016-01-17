@@ -8,7 +8,7 @@ layout: post
 
 This post is based on the chapter
 in the great book: [Artificial Intelligence: A Modern
-Approach](http://www.amazon.com/Artificial-Intelligence-Modern-Approach-3rd)
+Approach](http://www.amazon.com/Artificial-Intelligence-Modern-Approach-3rd/dp/0136042597/)
 
 So what's a decision tree? Simply put a way to make predictions based on
 observations from a knowledge base. Let's say we observed the following
@@ -45,7 +45,7 @@ unobserved examples.
 
 This whole idea actually more intuitive than it sounds, let's look at the algorithm as
 defined in the
-[book](http://www.amazon.com/Artificial-Intelligence-Modern-Approach-3rd):
+[book](http://www.amazon.com/Artificial-Intelligence-Modern-Approach-3rd/dp/0136042597/):
 
 > 1. If there are some positive and some negative examples, then choose the
 >    best attribute to split them.
