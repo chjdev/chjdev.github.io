@@ -14,6 +14,8 @@ gems:
   - jekyll-gist
   - jekyll-redirect-from
   - jekyll-sitemap
+exclude:
+  - assets/2016/01/node_modules
 
 #github-pages
 #markdown: redcarpet
