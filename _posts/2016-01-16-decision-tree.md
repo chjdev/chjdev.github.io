@@ -49,13 +49,13 @@ defined in the
 
 > 1. If there are some positive and some negative examples, then choose the
 >    best attribute to split them.
-> 2. If all the remaining examples are positive (or all. negative), then we are
+> 2. If all the remaining examples are positive (or all negative), then we are
 >    done: we can answer Yes or No.
 > 3. If there are no examples left, it means that no such example has been
 >    observed, and we return a default value calculated from the majority
 >    classification at the node's parent.
-> 4. If there are no attributes left, but both positive and neg,ativeexamples,
->    we have a prob- lem. It means that these examples have exactly the same
+> 4. If there are no attributes left, but both positive and negative examples,
+>    we have a problem. It means that these examples have exactly the same
 >    description, but different classifications. This happens when some of the
 >    data are incorrect; we say there is noise in the data. It also happens
 >    either when the attributes do not give enough information to describe the
