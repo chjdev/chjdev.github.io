@@ -87,7 +87,7 @@ function remainder(A, examples) {
 
 <!-- rendering code -->
 <div id="tree_diagram" class="bg-image"></div>
-<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="//d3js.org/d3.v3.min.js"></script>
 <script src="/assets/2016/01/decision_tree.js"></script>
 <style>
     .node circle {
