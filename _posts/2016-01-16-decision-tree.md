@@ -6,6 +6,8 @@ description: In this post I'll explain Decision Trees using JavaScript.
 layout: post
 ---
 
+<p class="message">Firefox is having some trouble with columns. I'm on it, please use Chrome or Safari in the meantime.</p>
+
 This post is based on the chapter
 in the great book: [Artificial Intelligence: A Modern
 Approach](http://www.amazon.com/Artificial-Intelligence-Modern-Approach-3rd/dp/0136042597/)
