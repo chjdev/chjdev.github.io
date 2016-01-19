@@ -3,6 +3,7 @@ title: What's a Decision Tree?
 card_type: photo
 image: /assets/2016/01/decision_tree.png
 description: In this post I'll explain Decision Trees using JavaScript.
+render: <div id="tree_diagram" class="bg-image"></div>
 layout: post
 ---
 
@@ -167,7 +168,6 @@ And that's it. The resulting tree for running this code can be seen at the botto
 actually slightly smaller! If that's due to a bug in my implementation please let me know ;) 
 
 <!-- rendering code -->
-<div id="tree_diagram" class="bg-image"></div>
 <script src="//d3js.org/d3.v3.min.js"></script>
 <script src="/assets/2016/01/decision_tree.js"></script>
 <style>
