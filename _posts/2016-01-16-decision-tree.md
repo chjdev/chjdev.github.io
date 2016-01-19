@@ -203,7 +203,6 @@ function convert_to_d3(tree) {
 
 function draw_tree() {
     //adapted from: https://gist.github.com/d3noob/8323795)
-
     var d3_tree = convert_to_d3(tree_data),
         margin = {top: 20, right: 50, bottom: 20, left: 50},
         aspect = 16 / 9;
@@ -260,5 +259,6 @@ function draw_tree() {
     }
 }
 window.onresize = draw_tree;
+draw_tree();
 draw_tree();
 </script>
