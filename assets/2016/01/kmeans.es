@@ -35,7 +35,7 @@ function mean(samples) {
 
 function kmeans_step(classified, kmeans) {
     return kmeans.map((_, c) => mean(classified.filter(sample => sample[2] === c)))
-          .map((mean, c) => [mean[0], mean[1], c])
+                 .map((mean, c) => [mean[0], mean[1], c])
 }
 
 // visualisation
