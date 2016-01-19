@@ -61,7 +61,7 @@ function kmeans_step(classified, kmeans) {
     });
 }
 
-// visualisation
+// visualization
 var ref = 1000,
     samples = [[[ref / 4, ref / 4], ref / 4, 200] // cluster 1
 , [[ref * 0.75, ref / 4], ref / 4, 250] // cluster 2

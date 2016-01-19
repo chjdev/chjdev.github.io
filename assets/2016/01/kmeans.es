@@ -37,7 +37,7 @@ function kmeans_step(classified, kmeans) {
                  .map((mean, c) => [mean[0], mean[1], c])
 }
 
-// visualisation
+// visualization
 const ref = 1000,
       samples = [ [[ref/4, ref/4], ref/4, 200]      // cluster 1
                 , [[ref*0.75, ref/4], ref/4, 250]   // cluster 2
