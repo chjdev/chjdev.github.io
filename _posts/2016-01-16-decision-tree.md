@@ -3,7 +3,7 @@ title: What's a Decision Tree?
 card_type: photo
 image: /assets/2016/01/decision_tree.png
 description: In this post I'll explain Decision Trees using JavaScript.
-render: <div id="tree_diagram" onload="draw_tree()"></div>
+render: <div id="tree_diagram" onload="draw_tree();"></div>
 layout: post
 ---
 
