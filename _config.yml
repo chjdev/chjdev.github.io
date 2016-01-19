@@ -7,7 +7,7 @@ tagline:             A Collection of Programming Ramblings by chjdev
 description:         A Collection of Programming Ramblings by chjdev
 url:                 https://chjdev.com
 enforce_ssl:         chjdev.com
-paginate:            6
+paginate:            8
 baseurl:             ""
 gems:
   - jekyll-paginate
