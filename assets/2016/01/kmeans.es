@@ -1,10 +1,10 @@
 // kmeans
-Array.range = function (count) { return Array.apply(null, Array(count)).map(function (_, i) {return i;}); };
+Array.range = function (count) { return Array.apply(null, Array(count)).map((_, i) => i); };
 
 function dots(orig, max_radius, num_dots) {
    const [x, y] = orig;
    return Array.range(num_dots)
-               .map(function (dot) {
+               .map((dot) => {
                    const angle = Math.random() * 2 * 3.14159,
                          radius = Math.random() * max_radius,
                          dx = Math.cos(angle) * radius,
@@ -91,7 +91,7 @@ const framesPerSecond = 5,
 
 draw(samples, kmeans);
 
-setTimeout(function () {
+setTimeout(() => {
     const classified = classify(samples, kmeans);
     draw(classified, kmeans);
     setTimeout(() => step(classified, kmeans), timeout)
