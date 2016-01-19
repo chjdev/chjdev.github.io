@@ -19,13 +19,12 @@ function dist(a, b) {
     return Math.sqrt(dx*dx + dy*dy); 
 }
 
-function max_dist(D) {
+function min_dist(D) {
     return D.reduce((acc, d, idx) => d < acc[1] ? [idx, d] : acc, [-1, Infinity])[0];
 }
 
 function classify(samples, kmeans) {
-    return samples.map(sample => [sample[0], sample[1], kmeans.map(mean => dist(sample, mean))])
-                  .map(sample => [sample[0], sample[1], max_dist(sample[2])])
+    return samples.map(sample => [sample[0], sample[1], min_dist(kmeans.map(mean => dist(sample, mean)))]);
 }
 
 function mean(samples) {

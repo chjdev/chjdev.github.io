@@ -30,7 +30,7 @@ function dist(a, b) {
     return Math.sqrt(dx * dx + dy * dy);
 }
 
-function max_dist(D) {
+function min_dist(D) {
     return D.reduce(function (acc, d, idx) {
         return d < acc[1] ? [idx, d] : acc;
     }, [-1, Infinity])[0];
@@ -38,11 +38,9 @@ function max_dist(D) {
 
 function classify(samples, kmeans) {
     return samples.map(function (sample) {
-        return [sample[0], sample[1], kmeans.map(function (mean) {
+        return [sample[0], sample[1], min_dist(kmeans.map(function (mean) {
             return dist(sample, mean);
-        })];
-    }).map(function (sample) {
-        return [sample[0], sample[1], max_dist(sample[2])];
+        }))];
     });
 }
 
