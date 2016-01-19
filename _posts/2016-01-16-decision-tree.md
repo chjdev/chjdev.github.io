@@ -257,6 +257,9 @@ function draw_tree() {
           .attr("class", "link")
           .attr("d", diagonal);
     }
+    document.getElementById('tree_diagram').style.display='none';
+    document.getElementById('tree_diagram').offsetHeight;
+    document.getElementById('tree_diagram').style.display='block';
 }
 window.onresize = draw_tree;
 draw_tree();
