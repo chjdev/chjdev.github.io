@@ -217,6 +217,7 @@ function draw_tree() {
     var diagonal = d3.svg.diagonal()
         .projection(function(d) { return [d.y, d.x]; });
     d3.selectAll("svg").remove();
+    document.getElementById("#tree_diagram").style.display = "none";
     var svg = d3.select("#tree_diagram").append("svg")
         .attr("width", width + margin.right + margin.left)
         .attr("height", height + margin.top + margin.bottom)
@@ -257,8 +258,8 @@ function draw_tree() {
           .attr("class", "link")
           .attr("d", diagonal);
     }
+    document.getElementById("#tree_diagram").style.display = "block";
 }
 window.onresize = draw_tree;
-draw_tree();
 draw_tree();
 </script>
