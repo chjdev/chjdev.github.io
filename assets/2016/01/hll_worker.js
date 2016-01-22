@@ -70,18 +70,19 @@ self.addEventListener('message', function(e) {
           log_log = HyperLogLog(0.065);
     
     const start = new Date().getTime();
-    for (var i = 0; i < 500000; ++i) {
+    for (var i = 0; i < 5000000; ++i) {
         var visitor = next_visitor(visitors);
 //        gold[visitor] = true;
         log_log.add(visitor);
-        if (i%10000 === 0) {
+        if (i%50000 === 0) {
             var estimated = log_log.count();
             var actual = Object.keys(gold).length;
-            self.postMessage(i + ' ' + estimated + ' ' + actual + ' ' + (-100 + 100 * (actual / estimated)));
+//            console.log(i, estimated, actual, (-100 + 100 * (actual / estimated)));
+            self.postMessage([i, estimated]);
         }
     }
     const end = new Date().getTime();
-    self.postMessage("took" + ' ' + (end - start));
+    console.log("took", end - start);
 
 }, false);
 
