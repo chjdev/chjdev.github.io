@@ -1,0 +1,28 @@
+.value { 
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+}
+.throughput { 
+    stroke: none;
+    fill: lightgrey;
+    opacity: 0.3;
+}
+.gold { 
+    stroke: red;
+    stroke-width: 2;
+    fill: none;
+}
+.stderror { 
+    stroke: none;
+    fill: steelblue;
+    opacity: 0.2
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}

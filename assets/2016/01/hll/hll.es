@@ -8,12 +8,12 @@ function HyperLogLog(std_error) {
           k_comp = 32 - k,
           m = Math.pow(2, k),
           min_estimate = 5/2 * m,
-          max_estimate = 1/30 * POW_2_32;
+          max_estimate = 1/30 * POW_2_32,
           alpha_m = m == 16 ? 0.673
               : m == 32 ? 0.697
               : m == 64 ? 0.709
               : 0.7213 / (1 + 1.079 / m),
-          estimators = new Uint32Array(m);
+          estimators = new Array(m).fill(0);
 
     function log2(x) {
          return Math.log(x) / Math.LN2;

@@ -10,6 +10,10 @@ layout: default
   <h1 class="post-title">{{ page.title }}</h1>
   <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date_to_string }}</time>
   {{ content }}
+
+  <i>You have a question or found an issue?<br/>
+     Then head over to Github and open an
+     <a href="https://github.com/chjdev/chjdev.github.io/issues" target="_blank">Issue</a> please!</i>
 </article>
 {{ page.render }}
 
