@@ -8,7 +8,7 @@ layout: post
 In this post we'll take a look at HyperLogLog, a probabilistic data structure
 that allows you to estimate the cardinality of huge data sets with minuscule
 memory requirements. This page is running an implementation JavaScript and uses
-*4kb* to estimate a cardinality of up to *10,000,000 unique visitors* based on
+**4kb** to estimate a cardinality of up to **10,000,000 unique visitors** based on
 50,000,000 randomly generated visits.
 
 What is cardinality? It is the amount of unique elements in a set. And is
@@ -134,14 +134,16 @@ numbers instead of randomized bit vectors, e.g.:
 
 $$
 \begin{align}
-  1 &= 0b0000000000000001 \\
+      1 &= 0b0000000000000001 \\
   11593 &= 0b0010110101001001 \\
+  32768 &= 0b1000000000000000 \\
   44266 &= 0b1010110011101010 \\
   65535 &= 0b1111111111111111
 \end{align}
 $$
 
-The chance to hit a low rank number is very high, e.g. for $$ \text{rank}(n) =
+Half of the randomly chosen numbers will be $$ \geq 2^{15} $$ ($$ 2^{16} / 2 = 2^{16} * 2^{-1} = 2^{15} $$.
+So, the chance to hit a low rank number is very high, e.g. for $$ \text{rank}(n) =
 1 $$ (i.e. no leading zero) the chance to hit a number is $$ 2^{15} / 2^{16} =
 50\% $$ (a 1 in the front leaving 15 bits). However to find one of $$
 \text{rank(n)} = 15 $$ only 1 number is possible, i.e. $$ 1 =
