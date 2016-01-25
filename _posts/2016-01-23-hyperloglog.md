@@ -30,7 +30,7 @@ They can answer a diverse set of problems:
 * and, the topic of this post and basis for many of such questions: estimate the cardinality of elements in a set
 
 They work by making smart observations about the internal structure of the data
-and it's correlation with statistic insights. For example HyperLogLog is based
+and its correlation with statistical insights. For example HyperLogLog is based
 on the likelihood of encountering a specific pattern of 0s in the datum and 
 relating that to the size of the cardinality *probably* necessary to find it.
 More on that [later](#hyperloglog).
@@ -41,7 +41,7 @@ not able to give you the *precise* answers to the questions above, however,
 they give acceptable answers at a *fraction* of the cost.
 
 What is this *fraction* I talk about? Well in the case of this blog post
-it's an **20,000 times smaller** memory footprint!
+it's a **20,000 times smaller** memory footprint!
 
 
 ### When and Where?
@@ -174,7 +174,7 @@ This leads us to the actual formula to estimate the cardinality:
 
 $$
 \begin{align}
-  E &= \alpha_m * m^2 * \left(\sum_{j=1}^{m} 2^{-M[j]}\right) \\
+  E &= \alpha_m * m^2 * \left(\sum_{j=1}^{m} 2^{-M[j]}\right)^{-1} \\
   M[i] &= \max_{x \in S_i} \text{rank}(x)
 \end{align}
 $$
