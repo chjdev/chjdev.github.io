@@ -142,7 +142,7 @@ $$
 \end{align}
 $$
 
-Half of the randomly chosen numbers will be $$ \geq 2^{15} $$ ($$ 2^{16} / 2 = 2^{16} * 2^{-1} = 2^{15} $$.
+Half of the randomly chosen numbers will be $$ \geq 2^{15} $$ ($$ 2^{16} / 2 = 2^{16} * 2^{-1} = 2^{15} $$).
 So, the chance to hit a low rank number is very high, e.g. for $$ \text{rank}(n) =
 1 $$ (i.e. no leading zero) the chance to hit a number is $$ 2^{15} / 2^{16} =
 50\% $$ (a 1 in the front leaving 15 bits). However to find one of $$
