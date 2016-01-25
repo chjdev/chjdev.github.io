@@ -275,8 +275,8 @@ window.onload = window.onresize = graph_reset;
 </script>
 
 <div class="message"><b>Warning!</b> This experiment is quite intense and might
-slow down your browser quite a bit!  The best performing browser while testing
-was Firefox.</div>
+slow down your browser quite a bit! A modern browser is necessary, the
+best performing one while testing was Firefox.</div>
 
 | Experiment Parameter      | Value                                                                |
 | ------------------------- | --------------------------------------------------------------------:|
