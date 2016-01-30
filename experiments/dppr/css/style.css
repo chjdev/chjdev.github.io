@@ -37,9 +37,9 @@
   max-width: 15em;
 }
 
-.prettyprint {
+pre.prettyprint {
   border:0;
-  background: #32383e;
+  background: #32383e !important;
   margin-left: 1px;
   margin-right: 1px;
   border-radius: 0;
