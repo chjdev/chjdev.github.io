@@ -1,0 +1,66 @@
+.navbar-brand {
+  padding: 0;
+}
+.navbar-brand > img {
+  height: 100%;
+  padding: 5px;
+}
+
+.list-group,
+.panel-body {
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.list-group-item:first-child, 
+.list-group-item {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  border: 0;
+}
+.list-group-item {
+  border-top: 1px solid #ddd;
+}
+
+.ellipsis-button {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 95%;
+}
+
+.tabbable > ul > li > a {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 15em;
+}
+
+.prettyprint {
+  border:0;
+}
+
+div.horizontal-slide {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.container-fluid {
+  padding-top: 65px;
+}
+
+.list-group > .active {
+  background: inherit;
+  font-weight: bold;
+}
+
+.panel-title {
+  color: white;
+}
+.panel-title.collapsed {
+  color: lightgrey;
+}
