@@ -28,6 +28,7 @@ function decision_tree_learning(examples, attribs, attrib_strs, def) {
               tree = {},
               m = majority_value(examples);
         tree[attrib_strs[best_attrib]] = {};
+        // a tail recursion would be nicer
         return best_values.reduce(function (tree, v_i) {
             const examples_i = examples.filter(example => example[best_attrib] === v_i),
                   attribs_i = attribs.filter((_, idx) => idx !== +best_attrib),
