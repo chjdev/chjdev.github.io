@@ -68,3 +68,7 @@ div.horizontal-slide {
 .panel-title.collapsed {
   color: lightgrey;
 }
+
+.panel-group .panel + .panel {
+    margin-top: 15px
+}
