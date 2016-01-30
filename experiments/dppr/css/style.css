@@ -39,6 +39,10 @@
 
 .prettyprint {
   border:0;
+  background: #32383e;
+  margin-left: 1px;
+  margin-right: 1px;
+  border-radius: 0;
 }
 
 div.horizontal-slide {
