@@ -70,5 +70,9 @@ div.horizontal-slide {
 }
 
 .panel-group .panel + .panel {
-    margin-top: 15px
+  margin-top: 15px
+}
+
+.nav > li > a {
+  padding: 0.1em 0.5em;
 }
