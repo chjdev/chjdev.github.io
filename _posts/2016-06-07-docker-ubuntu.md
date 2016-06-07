@@ -106,7 +106,7 @@ your `~/.docker` folder. Copy the server certificates from
 permission:
 
 ```
-$ sudo ls -la /etc/docker/fanlens.chjdev.com/
+$ sudo ls -la /etc/docker/YOUR_DOMAIN/
 total 20
 dr-------- 2 root root 4096 Jun  6 14:29 .
 drwx------ 3 root root 4096 Jun  6 15:42 ..
