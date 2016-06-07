@@ -20,22 +20,22 @@ bit.
 The problem is that 16.04 is now based on
 [systemd](https://wiki.ubuntu.com/SystemdForUpstartUsers) and not upstart
 anymore, so config files moved around.  Previously you would pass docker daemon
-options via <code>/etc/default/docker</code>, this however doesn't work
-anymore.
+options via `/etc/default/docker`, this however doesn't work
+anymore.  So here is a quick write up on how to set up [Docker with
+TLS](https://docs.docker.com/engine/security/https/) on 16.04 with systemd.
 
 Setting up Docker with TLS on systemd
 =====================================
 
-So here is a quick write up on how to set up [Docker with
-TLS](https://docs.docker.com/engine/security/https/) on 16.04 with systemd.
 First a quick edit of the docker systemd service file is necessary. It is
-located at <code>/lib/systemd/system/docker.service</code>.  As a default it
-will launch the docker daemon with a unix socket bound to <code>-H fd://</code>
+located at `/lib/systemd/system/docker.service`.  By default it
+will launch the docker daemon with a unix socket bound to `-H fd://`,
 however in my opinion it's nicer to have all config options at a central place,
-namely the <code>daemon.json</code> that is read by the docker daemon on start.
+namely the `daemon.json` config file that is read by the docker daemon
+on start.
 
-So first we'll remove the <code>-H fd://</code> flag from the
-<code>ExecStart</code> line of the <code>docker.service</code> file and leave
+So first we'll remove the `-H fd://` flag from the
+`ExecStart` line of the `docker.service` file and leave
 it plain without flags:
 
 ```
@@ -45,7 +45,7 @@ ExecStart=/usr/bin/docker daemon
 [...]
 ```
 
-Next we create the <code>/etc/docker/daemon.json</code> and add our settings
+Next we create the `/etc/docker/daemon.json` file and add our settings
 there:
 
 {% highlight json %}
@@ -58,14 +58,14 @@ there:
 }
 {% endhighlight %}
 
-As you can see i stored my TLS files in a subfolder <code>YOUR_DOMAIN</code> in
-the <code>/etc/docker/</code> directory. The certificates are usually specific
+As you can see I stored my TLS files in the subdirectory `YOUR_DOMAIN` in
+the `/etc/docker/` directory. The certificates are usually specific
 to a domain name so it makes it more obvious.  I bound the daemon to two hosts,
 first the default unix socket for nicer docker management on the server itself
-and the TLS secured TCP address. I use my domain name for <code>BIND</code> for
+and the TLS secured TCP address. I use my domain name for `BIND` for
 the same reason stated previously.
 
-And that should be it, reload and restart your docker service and use enable to
+And that should be it, `reload` and `restart` your docker service and use `enable` to
 boot it on startup and you should be able to connect:
 
 ```
@@ -74,12 +74,12 @@ sudo systemctl restart docker
 sudo systemctl enable docker
 ```
 
-You could opt to add your server user to the <code>docker</code> group on your
-system, however since I manage docker via TCP I opt not to use it and run
-docker via sudo if necessary.
+You could add your server user to the `docker` group (the unix socket is owned
+by this group), however since I manage docker via TCP I opt not to use it and
+run docker via sudo if necessary.
 
 Note: don't forget to distribute certificates to your clients, and  set the
-<code>DOCKER_HOST</code> and <code>DOCKER_TLS_VERIFY</code> environment
+`DOCKER_HOST` and `DOCKER_TLS_VERIFY` environment
 variables.
 
 Happy dockering!
@@ -91,9 +91,9 @@ This is somewhat beyond the scope of this quick post and I'd like to redirect
 you to the [official docs](https://docs.docker.com/engine/security/https/) for
 that.
 
-A really neat tool i encountered though is this
+A really neat tool I encountered though is this
 [GIST](https://gist.github.com/sheerun/ccdeff92ea1668f3c75f) by [Adam
-Stankiewicz](https://github.com/sheerun):
+Stankiewicz](https://github.com/sheerun) that can generate certificates quicklye:
 
 ```
 $ gem install certificate_authority
@@ -101,8 +101,8 @@ $ ruby certgen.rb YOUR_DOMAIN
 ```
 
 This will generate self signed client and server certificates and store them in
-your <code>~/.docker</code> folder. Copy the server certificates from
-<code>~/.docker/YOUR_DOMAIN</code> to your server and set the proper
+your `~/.docker` folder. Copy the server certificates from
+`~/.docker/YOUR_DOMAIN` to your server and set the proper
 permission:
 
 ```
