@@ -6,6 +6,8 @@ image: /assets/2016/06/docker_ubuntu.png
 card_type: summary_large_image
 ---
 
+[<img src="/assets/2016/06/docker_ubuntu.png/>](/assets/2016/06/docker_ubuntu.png)
+
 The Problem
 ===========
 
@@ -46,7 +48,7 @@ ExecStart=/usr/bin/docker daemon
 Next we create the <code>/etc/docker/daemon.json</code> and add our settings
 there:
 
-{% highlight javascript %}
+{% highlight json %}
 {
   "tlsverify": true,
   "tlscacert": "/etc/docker/YOUR_DOMAIN/ca.pem",
