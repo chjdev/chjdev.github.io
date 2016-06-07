@@ -36,22 +36,25 @@ So first we'll remove the <code>-H fd://</code> flag from the
 <code>ExecStart</code> line of the <code>docker.service</code> file and leave
 it plain without flags:
 
-  $ cat /lib/systemd/system/docker.service
-  [...]
-  ExecStart=/usr/bin/docker daemon
-  [...]
+```
+$ cat /lib/systemd/system/docker.service
+[...]
+ExecStart=/usr/bin/docker daemon
+[...]
+```
 
 Next we create the <code>/etc/docker/daemon.json</code> and add our settings
 there:
 
-  sudo cat /etc/docker/daemon.json
-  {
-    "tlsverify": true,
-    "tlscacert": "/etc/docker/YOUR_DOMAIN/ca.pem",
-    "tlscert"  : "/etc/docker/YOUR_DOMAIN/cert.pem",
-    "tlskey"   : "/etc/docker/YOUR_DOMAIN/key.pem",
-    "hosts"    : ["fd://", "TCP://BIND:2376"]
-  }
+{% highlight javascript %}
+{
+  "tlsverify": true,
+  "tlscacert": "/etc/docker/YOUR_DOMAIN/ca.pem",
+  "tlscert"  : "/etc/docker/YOUR_DOMAIN/cert.pem",
+  "tlskey"   : "/etc/docker/YOUR_DOMAIN/key.pem",
+  "hosts"    : ["fd://", "TCP://BIND:2376"]
+}
+{% endhighlight %}
 
 As you can see i stored my TLS files in a subfolder <code>YOUR_DOMAIN</code> in
 the <code>/etc/docker/</code> directory. The certificates are usually specific
@@ -63,9 +66,11 @@ the same reason stated previously.
 And that should be it, reload and restart your docker service and use enable to
 boot it on startup and you should be able to connect:
 
-  sudo systemctl daemon-reload
-  sudo systemctl restart docker
-  sudo systemctl enable docker
+```
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+sudo systemctl enable docker
+```
 
 You could opt to add your server user to the <code>docker</code> group on your
 system, however since I manage docker via TCP I opt not to use it and run
@@ -88,20 +93,23 @@ A really neat tool i encountered though is this
 [GIST](https://gist.github.com/sheerun/ccdeff92ea1668f3c75f) by [Adam
 Stankiewicz](https://github.com/sheerun):
 
-  $ gem install certificate_authority
-  $ ruby certgen.rb YOUR_DOMAIN
+```
+$ gem install certificate_authority
+$ ruby certgen.rb YOUR_DOMAIN
+```
 
 This will generate self signed client and server certificates and store them in
 your <code>~/.docker</code> folder. Copy the server certificates from
 <code>~/.docker/YOUR_DOMAIN</code> to your server and set the proper
 permission:
 
-  $ sudo ls -la /etc/docker/fanlens.chjdev.com/
-  total 20
-  dr-------- 2 root root 4096 Jun  6 14:29 .
-  drwx------ 3 root root 4096 Jun  6 15:42 ..
-  -r-------- 1 root root 1151 Jun  6 14:29 ca.pem
-  -r-------- 1 root root 1155 Jun  6 14:29 cert.pem
-  -r-------- 1 root root 1679 Jun  6 14:29 key.pem
-
+```
+$ sudo ls -la /etc/docker/fanlens.chjdev.com/
+total 20
+dr-------- 2 root root 4096 Jun  6 14:29 .
+drwx------ 3 root root 4096 Jun  6 15:42 ..
+-r-------- 1 root root 1151 Jun  6 14:29 ca.pem
+-r-------- 1 root root 1155 Jun  6 14:29 cert.pem
+-r-------- 1 root root 1679 Jun  6 14:29 key.pem
+```
 
