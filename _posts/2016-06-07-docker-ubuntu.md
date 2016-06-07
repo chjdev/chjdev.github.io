@@ -93,7 +93,7 @@ that.
 
 A really neat tool I encountered though is this
 [GIST](https://gist.github.com/sheerun/ccdeff92ea1668f3c75f) by [Adam
-Stankiewicz](https://github.com/sheerun) that can generate certificates quicklye:
+Stankiewicz](https://github.com/sheerun) that can generate certificates quickly:
 
 ```
 $ gem install certificate_authority
