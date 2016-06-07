@@ -6,7 +6,7 @@ image: /assets/2016/06/docker_ubuntu.png
 card_type: summary_large_image
 ---
 
-[<img src="/assets/2016/06/docker_ubuntu.png/>](/assets/2016/06/docker_ubuntu.png)
+[<img src="/assets/2016/06/docker_ubuntu.png"/>](/assets/2016/06/docker_ubuntu.png)
 
 The Problem
 ===========
