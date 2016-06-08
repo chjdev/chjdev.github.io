@@ -1,8 +1,8 @@
 ---
-title: Attention: Docker overrules UFW
+title: Attention! Docker overrules UFW
 layout: post
 description: Docker, by default, directly manipulates iptables in order to work its network magic. It thus completely circumvents UFW rules! In this post I show strategies to deal with this.
-card_type: summar
+card_type: summary
 ---
 
 Problem
