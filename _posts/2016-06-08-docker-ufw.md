@@ -18,7 +18,7 @@ reachable. Even explicitly `REJECT`-ing the ports still kept them open!  I'm
 using [UFW](https://wiki.ubuntu.com/UncomplicatedFirewall) as firewall to keep
 the base system as simple as possible.
 
-Huh? What's the hell is going on? Well, as we can see in the
+Huh? What the hell is going on? Well, as we can see in the
 [docs](https://docs.docker.com/engine/userguide/networking/default_network/binding/),
 Docker directly manipulates the systems `iptables` to forward trafffic to
 containers!
