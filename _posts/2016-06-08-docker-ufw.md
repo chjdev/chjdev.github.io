@@ -5,7 +5,7 @@ description: Docker, by default, directly manipulates iptables in order to work 
 card_type: summary
 ---
 
-TL;DR: Docker, by default, directly manipulates iptables in order to work its network magic. It thus completely circumvents UFW rules! In this post I show strategies to deal with this.
+Docker, by default, directly manipulates iptables in order to work its network magic. It thus completely circumvents UFW rules! In this post I show strategies to deal with this.
 
 Problem
 =======
