@@ -43,13 +43,13 @@ Strategies
 If you want to disable this behaviour you can disable it in your daemon.json
 (or via flags) and rely on the userland proxy:
 
-{% highlight json %}
+```
 {
 "iptables": false,
 "userland-proxy": true,
 ...
 }
-{% endhighlight %}
+```
 
 Now you face a different problem though. Since Docker uses bridged networking
 by
