@@ -23,7 +23,7 @@ Huh? What's the hell is going on? Well, as we can see in the
 Docker directly manipulates the systems `iptables` to forward trafffic to
 containers!
 
-```
+{% highlight bash %}
 $ sudo iptables --list
 [...]
 Chain DOCKER (2 references)
@@ -31,7 +31,7 @@ target   prot opt source       destination
 ACCEPT   tcp  --  anywhere     172.18.0.6     tcp dpt:https
 ACCEPT   tcp  --  anywhere     172.18.0.6     tcp dpt:http
 [...]
-```
+{% endhighlight %}
 
 Well, I wasn't aware that this completely circumvents rules set in UFW.  UFW in
 turn (obviously) doesn't show you the whole `iptables` state but only its
@@ -43,13 +43,13 @@ Strategies
 If you want to disable this behaviour you can disable it in your daemon.json
 (or via flags) and rely on the userland proxy:
 
-```
+{% highlight bash %}
 {
   "iptables": false,
   "userland-proxy": true,
   ...
 }
-```
+{% endhighlight %}
 
 Now you face a different problem though. Since Docker uses bridged networking
 by
