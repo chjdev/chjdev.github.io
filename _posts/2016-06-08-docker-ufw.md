@@ -54,7 +54,7 @@ If you want to disable this behaviour you can disable it in your daemon.json
 Now you face a different problem though. Since Docker uses bridged networking
 by
 [default](https://docs.docker.com/v1.8/articles/networking/#container-networking)
-You now lose the original source IP, which, depending on your use-case, can be
+you now lose the original source IP, which, depending on your use-case, can be
 quite important, e.g. to log it as part of the access log of your web servers.
 
 To solve this issue you have two options: switch the networking stack to `host`
