@@ -1,3 +1,5 @@
 ---
-redirect_to: "https://fanlens.chjdev.com"
+title: Fanlens
+redirect_to: 
+  - https://fanlens.chjdev.com
 ---
