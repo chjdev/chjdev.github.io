@@ -34,7 +34,7 @@ author:
   email:             chjdev@gmail.com
 
 pages_list:       
-Fanlens: 'https://fanlens.chjdev.com'
+Fanlens: '/fanlens'
   About: '/about'
   Archive: '/archive'
   Feed: '/atom.xml'
