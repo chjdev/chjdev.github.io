@@ -115,3 +115,8 @@ drwx------ 3 root root 4096 Jun  6 15:42 ..
 -r-------- 1 root root 1679 Jun  6 14:29 key.pem
 ```
 
+Update
+======
+
+Please take note that docker (by default) overrules your UFW firewall rules!
+I wrote a post on this which you can find here: {% post_url 2016-06-08-docker-ufw %}
