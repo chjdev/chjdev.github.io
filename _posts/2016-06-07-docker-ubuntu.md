@@ -54,7 +54,7 @@ there:
   "tlscacert": "/etc/docker/YOUR_DOMAIN/ca.pem",
   "tlscert"  : "/etc/docker/YOUR_DOMAIN/cert.pem",
   "tlskey"   : "/etc/docker/YOUR_DOMAIN/key.pem",
-  "hosts"    : ["fd://", "TCP://BIND:2376"]
+  "hosts"    : ["fd://", "tcp://BIND:2376"]
 }
 {% endhighlight %}
 
