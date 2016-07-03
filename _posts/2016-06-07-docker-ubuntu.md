@@ -119,4 +119,4 @@ Update
 ======
 
 Please take note that docker (by default) overrules your UFW firewall rules!
-I wrote a post on this which you can find here: [[{% post_url 2016-06-08-docker-ufw %}]]
+I wrote a post on this which you can find [here]({% post_url 2016-06-08-docker-ufw %}).
