@@ -13,6 +13,9 @@
   }
   
   grid-auto-rows: 250px;
+  @media(min-width: 1280px) and (max-height: 1000px) {
+    grid-auto-rows: 170px;
+  }
   grid-column-gap: 2rem;
   grid-row-gap: 2rem;
 }
@@ -24,6 +27,10 @@
   p {
     display: -webkit-box;
     -webkit-line-clamp: 8;
+    @media(min-width: 1280px) and (max-height: 1000px) {
+      -webkit-line-clamp: 3;
+    }
+
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
