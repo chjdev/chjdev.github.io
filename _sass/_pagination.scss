@@ -10,9 +10,10 @@
   color: #ccc;
   text-align: center;
   
-  @media (min-width: 55rem) and (max-width: 1280px) {
+  /* hide when small pagination is active */
+  /* @media (min-width: 55rem) and (max-width: 1280px) {
    display: none;
-  }
+  } */
 }
 
 /*.pagination-small {
