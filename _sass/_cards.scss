@@ -39,6 +39,17 @@
   }
 }
 
+.card-image-excerpt {
+  display: flex;
+  align-items: stretch;
+  .card-excerpt {
+    flex: 2.5;
+    p {
+      margin: 0
+    }
+  }
+}
+
 .card-image {
   flex: 1;
   background-size: contain;
