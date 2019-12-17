@@ -9,12 +9,19 @@
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
   color: #ccc;
   text-align: center;
+  
+  @media (min-width: 55rem) and (max-width: 1280px) {
+   display: none;
+  }
 }
 
 .pagination-small {
-  display: flex;
+  display: none;
   flex-direction: column;
   width: 100%;
+  @media (min-width: 55rem) and (max-width: 1280px) {
+   display: flex;
+  }
 }
 
 // Pagination items can be `span`s or `a`s
