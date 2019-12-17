@@ -11,7 +11,11 @@ layout: default
     {% if post.image %}
     <div class="card-image" style="background-image: url({{ post.image }});"/>
     {% else %}
-      {{ post.excerpt }}
+      {% assign shortened = post.excerpt | slice: 0, 360 %}
+      {{ shortened }}
+      {% if shortened != post.excerpt %}
+        ...
+      {% endif %}
     {% endif %}
   </article>
   {% endfor %}
