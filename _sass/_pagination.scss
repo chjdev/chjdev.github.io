@@ -18,9 +18,15 @@
 .pagination-small {
   display: none;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
+  text-align: center;
   @media (min-width: 55rem) and (max-width: 1280px) {
    display: flex;
+  }
+  span, a {
+    width: 100%;
   }
 }
 
