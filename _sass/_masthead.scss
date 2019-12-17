@@ -46,6 +46,10 @@
   padding: 0;
   margin-left: 0.3em;
   margin-right: 0.3em;
+  
+  @media(max-width: 375px) {
+     display: none;
+  }
 }
 
 .masttitle {
@@ -54,6 +58,9 @@
   margin-bottom: 0;
   color: #505050;
 
+  @media(max-width: 375px) {
+     display: block;
+  }
 }
 
 .mastnav {
