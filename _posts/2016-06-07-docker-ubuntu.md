@@ -3,6 +3,7 @@ title: TLS secured Docker on Ubuntu 16.04 Quickstart
 layout: post
 description: Quickly set up TLS secured Docker on Ubuntu 16.04 with systemd
 image: /assets/2016/06/docker_ubuntu.png
+include_excerpt: true
 card_type: summary_large_image
 ---
 
