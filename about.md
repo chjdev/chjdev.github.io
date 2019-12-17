@@ -15,15 +15,10 @@ title: About
   "url": "https://chjdev.com",
   "image": "{{ site.url }}/assets/portrait.png",
   "sameAs": [
-    "https://www.facebook.com/chjdev",
     "https://www.twitter.com/chjdev",
-    "https://www.twitter.com/chjdev",
-    "https://www.linkedin.com/in/chjdev",
-    "https://plus.google.com/+ChristianJunker-chjdev"]
+    "https://www.linkedin.com/in/chjdev"
+  ]
 }
 </script>
 
-<p class="message"> Hey there! I'm currently revamping my blog, this page is
-still TODO.</p>
-
-In the meantime you can go to my [LinkedIn Profile](https://www.linkedin.com/in/chjdev) for Details about me.  
+Hop over to my [LinkedIn Profile](https://www.linkedin.com/in/chjdev) for details about me.  
