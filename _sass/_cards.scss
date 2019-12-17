@@ -1,5 +1,19 @@
 .cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image {
+  flex: 1;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
