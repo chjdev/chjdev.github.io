@@ -25,6 +25,7 @@
   flex-direction: column;
   overflow: hidden;
   p {
+    margin: 0;
     display: -webkit-box;
     @media(min-width: 55rem) {
       -webkit-line-clamp: 8;
@@ -40,7 +41,7 @@
   .card-excerpt {
     flex: 2.5;
     p {
-      margin: 0 0 0 1.5rem;
+      padding: 0 0 0 1.5rem;
     }
   }
 }
