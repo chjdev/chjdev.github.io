@@ -7,9 +7,6 @@ include_excerpt: true
 card_type: summary_large_image
 ---
 
-The Problem
-===========
-
 Installing a Vanilla-Docker environment on [Ubuntu
 16.04](http://releases.ubuntu.com/16.04/) was surprisingly non-straightforward
 for me. Turns out it would have been actually quite simple, but the docs and
