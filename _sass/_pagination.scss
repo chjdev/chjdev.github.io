@@ -11,6 +11,12 @@
   text-align: center;
 }
 
+.pagination-small {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 // Pagination items can be `span`s or `a`s
 .pagination-item {
   display: block;
