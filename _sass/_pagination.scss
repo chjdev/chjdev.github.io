@@ -22,11 +22,16 @@
   justify-content: center;
   width: 100%;
   text-align: center;
+  padding: 3rem 0;
   @media (min-width: 55rem) and (max-width: 1280px) {
    display: flex;
   }
   span, a {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
   }
 }
 
