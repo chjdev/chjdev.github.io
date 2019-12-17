@@ -2,6 +2,7 @@
 title: From Monoids to Monads in Python
 description: A pragmatic description of monads using Python.
 image: /assets/2014/12/First_matryoshka_museum_doll_open.jpg
+include_excerpt: true
 layout: post
 ---
 
