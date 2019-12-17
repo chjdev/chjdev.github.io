@@ -8,7 +8,8 @@
    grid-template-columns: repeat(3, 1fr);
   }
   @media(min-width: 1600px) {
-   grid-template-columns: repeat(4, 1fr);
+   /* 3 works better for 9 pagination */
+   grid-template-columns: repeat(3, 1fr);
   }
   
   grid-auto-rows: 1fr;
