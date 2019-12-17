@@ -9,7 +9,7 @@ layout: default
     <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time>
 
     {% if post.image %}
-      <img src="{{ post.image }}" style="width:95%;margin:auto;" />
+    <div class="card-image" style="background-image: url({{ post.image }});"/>
     {% else %}
       {{ post.excerpt }}
     {% endif %}
