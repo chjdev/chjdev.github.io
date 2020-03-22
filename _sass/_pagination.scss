@@ -9,7 +9,32 @@
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
   color: #ccc;
   text-align: center;
+  
+  /* hide when small pagination is active */
+  /* @media (min-width: 55rem) and (max-width: 1280px) {
+   display: none;
+  } */
 }
+
+/*.pagination-small {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  padding: 3rem 0;
+  @media (min-width: 55rem) and (max-width: 1280px) {
+   display: flex;
+  }
+  span, a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+}*/
 
 // Pagination items can be `span`s or `a`s
 .pagination-item {

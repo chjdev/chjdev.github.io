@@ -7,7 +7,7 @@ tagline:             A Collection of Programming Ramblings by chjdev
 description:         A Collection of Programming Ramblings by chjdev
 url:                 https://chjdev.com
 enforce_ssl:         chjdev.com
-paginate:            8
+paginate:            6
 baseurl:             ""
 gems:
   - jekyll-paginate
@@ -31,10 +31,8 @@ sass:
 author:
   name:              Christian Junker
   url:               https://twitter.com/chjdev
-  email:             chjdev@gmail.com
 
-pages_list:       
-  Fanlens: '/fanlens'
+pages_list:
   About: '/about'
   Archive: '/archive'
   Feed: '/atom.xml'

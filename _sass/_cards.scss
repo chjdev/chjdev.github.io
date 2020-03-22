@@ -1,0 +1,54 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  @media(max-width: 55rem) {
+   grid-template-columns: repeat(1, 1fr);
+  }
+  @media(min-width: 1280px) {
+   grid-template-columns: repeat(3, 1fr);
+  }
+  @media(min-width: 1600px) {
+   /* 3 works better for 9 pagination */
+   grid-template-columns: repeat(3, 1fr);
+  }
+  
+  grid-auto-rows: 280px;
+  @media(max-width: 55rem) {
+    grid-auto-rows: minmax(150px, auto)
+  }
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  p {
+    margin: 0;
+    display: -webkit-box;
+    @media(min-width: 55rem) {
+      -webkit-line-clamp: 8;
+    }
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+.card-image-excerpt {
+  display: flex;
+  align-items: stretch;
+  .card-excerpt {
+    flex: 2.5;
+    p {
+      padding: 0 0 0 1.5rem;
+    }
+  }
+}
+
+.card-image {
+  flex: 1;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}

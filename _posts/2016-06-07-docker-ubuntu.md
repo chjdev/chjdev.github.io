@@ -3,19 +3,17 @@ title: TLS secured Docker on Ubuntu 16.04 Quickstart
 layout: post
 description: Quickly set up TLS secured Docker on Ubuntu 16.04 with systemd
 image: /assets/2016/06/docker_ubuntu.png
+include_excerpt: true
 card_type: summary_large_image
 ---
-
-[<img src="/assets/2016/06/docker_ubuntu.png"/>](/assets/2016/06/docker_ubuntu.png)
-
-The Problem
-===========
 
 Installing a Vanilla-Docker environment on [Ubuntu
 16.04](http://releases.ubuntu.com/16.04/) was surprisingly non-straightforward
 for me. Turns out it would have been actually quite simple, but the docs and
 tutorials seem to be still assuming 14.04/non-systemd and led me in circles a
 bit.
+
+[<img src="/assets/2016/06/docker_ubuntu.png"/>](/assets/2016/06/docker_ubuntu.png)
 
 The problem is that 16.04 is now based on
 [systemd](https://wiki.ubuntu.com/SystemdForUpstartUsers) and not upstart
