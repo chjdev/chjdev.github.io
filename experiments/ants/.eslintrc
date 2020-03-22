@@ -1,0 +1,34 @@
+{
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    "strict": [2, "never"],
+    "linebreak-style": ["error", "unix"],
+    "no-unused-vars": [
+      "error",
+      {
+        "args": "none"
+      }
+    ],
+    "curly": "error",
+    "eqeqeq": [
+      "error",
+      "always",
+      {
+        "null": "ignore"
+      }
+    ],
+    "no-console": "off",
+    "no-dupe-args": "error",
+    "no-dupe-class-members": "error",
+    "no-dupe-keys": "error",
+    "camelcase": "off",
+    "prettier/prettier": "error"
+  },
+  "plugins": ["prettier"],
+  "extends": ["eslint:recommended"]
+}
