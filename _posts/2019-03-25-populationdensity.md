@@ -5,6 +5,7 @@ description: In this experiment I'm combining Rust with wasm-bindgen to create a
 cram: true
 image: /assets/2019/03/populationdensity.png
 include_excerpt: true
+render: <iframe src='/experiments/populationdensity/' style='width: 100%; height: 40vh; border: none'></iframe>
 card_type: summary_large_image
 ---
 
