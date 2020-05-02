@@ -19,6 +19,7 @@ layout: post
 # Lat/Lon to XYZ
 
 Since the data is in latitude/longitude format it's pretty easy to convert them to XYZ coordinates using some trigonometry.
+
 But first of how does the coordinate system work in WebGL?
 
 ## WebGL Coordinates
