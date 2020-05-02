@@ -420,8 +420,8 @@ const Main = ({ keys, x, y, width, height }) => {
         {
           className: "tag",
           x: width,
-          y: height + 1.5 * tagFontSize,
-          dy: tagFontSize,
+          y: height,
+          dy: y > 5 * tagFontSize ? 3 * tagFontSize : 2 * tagFontSize,
           textAnchor: "end",
           fontFamily: "sans-serif",
           fontWeight: "bold",
@@ -437,6 +437,7 @@ const Main = ({ keys, x, y, width, height }) => {
 const containerStyle = {
   width: "100vw",
   height: "100vh",
+  overflow: "hidden",
 };
 const Svg = () => {
   const [
@@ -452,7 +453,9 @@ const Svg = () => {
   React.useEffect(() => {
     const observer = new ResizeObserver((entries) => {
       const entry = entries[0];
-      const { width: newWidth, height: newHeight } = entry.contentRect;
+      const { width: newWidth, height: jankyNewHeight } = entry.contentRect;
+      // account for stupid mobile browsers... looking at you mobile safari
+      const newHeight = jankyNewHeight - (document.querySelector("body").getClientRects()[0].height - window.innerHeight);
       window.requestAnimationFrame(() => {
         if (containerWidth !== newWidth || containerHeight !== newHeight) {
           setSize({
