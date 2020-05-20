@@ -29,7 +29,7 @@ const subKeys = ["_confirmed", "_death", "_recovered"];
 const fetchData = async () =>
   new Promise((resolve, reject) =>
     d3.csv(
-      "https://raw.githubusercontent.com/walterra/covid-19/master/data/corin_data.csv",
+      "https://corin.at/raw.php?format=csv",
       (d) =>
         Object.assign(
           d,
