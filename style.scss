@@ -1,0 +1,23 @@
+---
+# Use a comment to ensure Jekyll reads the file to be transformed into CSS later
+# only main files contain this front matter, not partials.
+---
+
+// Fonts
+@import "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap";
+
+@import "variables";
+@import "typography";
+@import "content";
+@import "navbar";
+@import "utilities";
+
+@import "slider";
+
+//Mixins
+@import "mixins/buttons";
+
+// Components
+@import "components/buttons";
+@import "components/cards";
+@import "components/forms";

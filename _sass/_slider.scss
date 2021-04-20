@@ -1,0 +1,62 @@
+@keyframes slider-anim {
+  0% {
+    background-image: url(/images/visalyze_browser.png);
+  }
+  14% {
+    background-image: url(/images/visalyze_browser.png);
+  }
+  16% {
+    background-image: url(/images/dppr_browser.png);
+  }
+  32% {
+    background-image: url(/images/dppr_browser.png);
+  }
+  33% {
+    background-image: url(/images/eev.png);
+  }
+  49% {
+    background-image: url(/images/eev.png);
+  }
+  50% {
+    background-image: url(/images/juno_browser.png);
+  }
+  64% {
+    background-image: url(/images/juno_browser.png);
+  }
+  66% {
+    background-image: url(/images/exchange_browser.png);
+  }
+  81% {
+    background-image: url(/images/exchange_browser.png);
+  }
+  83% {
+    background-image: url(/images/admin_browser.png);
+  }
+  98% {
+    background-image: url(/images/admin_browser.png);
+  }
+  100% {
+    background-image: url(/images/visalyze_browser.png);
+  }
+}
+.slider {
+  background-image: url(/images/juno.jpeg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-origin: content-box;
+  box-sizing: border-box;
+  padding: 0 2rem 0 2rem;
+  animation-duration: 44s;
+  animation-name: slider-anim;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  transition: all 1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 1200px) {
+    padding: 2rem 2rem 0 2rem;
+    height: 40vh;
+  }
+}

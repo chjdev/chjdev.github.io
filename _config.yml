@@ -8,6 +8,7 @@ description:         A Collection of Programming Ramblings by chjdev
 url:                 https://chjdev.com
 enforce_ssl:         chjdev.com
 paginate:            6
+paginate_path:       "/blog/page:num"
 baseurl:             ""
 gems:
   - jekyll-paginate
@@ -33,6 +34,6 @@ author:
   url:               https://twitter.com/chjdev
 
 pages_list:
-  About: '/about'
+  Experiments: '/experiments'
   Archive: '/archive'
   Feed: '/atom.xml'

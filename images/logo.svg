@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="606"
+     height="400"
+     viewBox="415 250 900 650"
+     version="1.1">
+    <defs>
+        <style type="text/css"><![CDATA[
+            @keyframes fadeIn {
+                0% {
+                    filter: url(#color-gray);
+                }
+                87% {
+                    transform: scale(1);
+                    filter: url(#color-gray);
+                }
+                90% {
+                    transform: scale(1.3);
+                    filter: url(#color-flash);
+                }
+                100% {
+                    transform: scale(1);
+                    filter: url(#color);
+                }
+            }
+            .usepath {
+                animation: 1s ease-in-out 0.5s 1 fadeIn;
+                animation-fill-mode: forwards;
+                stroke: none;
+                fill-rule: nonzero;
+                fill-opacity: 1;
+                shape-rendering: geometricPrecision;
+                /*filter: grayscale(0) saturate(0.65) brightness(1.02) contrast(1.2)*/;
+                transform-origin: 100% 100%;
+                transform: translate3d(0px, 0px, 0px);
+                filter: url(#color-gray);
+            }
+            #area1 { fill:rgb(63.499451%,9.799194%,35.699463%); }
+            #area2 { fill:rgb(34.098816%,12.199402%,35.699463%); }
+            #area3 { fill:rgb(70.599365%,7.499695%,35.699463%); }
+            #area4 { fill:rgb(83.898926%,4.299927%,31.799316%); }
+            #area5 { fill:rgb(72.898865%,6.298828%,35.299683%); }
+            #area6 { fill:rgb(57.598877%,5.499268%,34.098816%); }
+            #area7 { fill:rgb(74.499512%,5.099487%,35.299683%); }
+            #area8 { fill:rgb(57.299805%,37.298584%,21.199036%); }
+            #area9 { fill:rgb(70.599365%,7.499695%,35.699463%); }
+            #area10 { fill:rgb(86.698914%,44.699097%,12.89978%); }
+            #area11 { fill:rgb(88.198853%,64.299011%,39.599609%); }
+            #area12 { fill:rgb(69.398499%,49.798584%,28.599548%); }
+            #area13 { fill:rgb(48.199463%,10.998535%,32.899475%); }
+            #area14 { fill:rgb(39.99939%,14.099121%,50.999451%); }
+            #area15 { fill:rgb(25.898743%,16.099548%,9.399414%); }
+            #area16 { fill:rgb(38.798523%,30.599976%,25.898743%); }
+            #area17 { fill:rgb(86.698914%,44.699097%,12.89978%); }
+            #area18 { fill:rgb(100%,80.39856%,0%); }
+            #area19 { fill:rgb(17.599487%,17.999268%,50.999451%); }
+            #area20 { fill:rgb(57.598877%,75.299072%,12.199402%); }
+            #area21 { fill:rgb(11.399841%,43.899536%,71.798706%); }
+            #area22 { fill:rgb(17.599487%,17.999268%,50.999451%); }
+            #area23 { fill:rgb(74.499512%,10.598755%,24.299622%); }
+            #area24 { fill:rgb(90.59906%,44.299316%,55.299377%); }
+            #area25 { fill:rgb(96.899414%,67.098999%,22.399902%); }
+            #area26 { fill:rgb(94.898987%,56.898499%,0%); }
+            #area27 { fill:rgb(90.99884%,30.599976%,10.598755%); }
+            #area28 { fill:rgb(100%,80.39856%,19.599915%); }
+            #area29 { fill:rgb(74.099731%,8.599854%,13.299561%); }
+            #area30 { fill:rgb(97.999573%,72.499084%,0%); }
+            #area31 { fill:rgb(89.7995%,19.999695%,16.499329%); }
+            #area32 { fill:rgb(0%,58.399963%,83.898926%); }
+            #area33 { fill:rgb(48.599243%,80.39856%,95.298767%); }
+            #area34 { fill:rgb(41.19873%,78.399658%,94.898987%); }
+            #area35 { fill:rgb(17.599487%,17.999268%,50.999451%); }
+            #area36 { fill:rgb(11.399841%,43.899536%,71.798706%); }
+            #area37 { fill:rgb(20.799255%,65.899658%,87.799072%); }
+            #area38 { fill:rgb(57.598877%,75.299072%,12.199402%); }
+            #area39 { fill:rgb(0%,55.299377%,21.199036%); }
+            #area40 { fill:rgb(74.099731%,8.599854%,13.299561%); }
+            #area41 { fill:rgb(94.898987%,56.898499%,0%); }
+            #area42 { fill:rgb(97.999573%,72.499084%,0%); }
+            #area43 { fill:rgb(89.7995%,19.999695%,16.499329%); }
+            #area44 { fill:rgb(100%,87.799072%,21.598816%); }
+            #area45 { fill:rgb(90.99884%,30.599976%,10.598755%); }
+            #area46 { fill:rgb(100%,80.39856%,19.599915%); }
+            #area47 { fill:rgb(0%,58.399963%,83.898926%); }
+            #area48 { fill:rgb(48.599243%,80.39856%,95.298767%); }
+        ]]></style>
+
+<!--        <filter id="noise">-->
+<!--            <feTurbulence type="fractalNoise" baseFrequency="0.35" result="noisy"/>-->
+<!--            <feColorMatrix type="saturate" values="0" result="desat"/>-->
+<!--            <feBlend in="SourceGraphic" in2="desat" mode="hard-light"/>-->
+<!--        </filter>-->
+        <filter id="color-gray">
+            <feColorMatrix in="SourceGraphic" type="saturate" values="0" result="desat" />
+        </filter>
+        <filter id="color-flash">
+            <feColorMatrix in="SourceGraphic" type="saturate" values="1" result="desat" />
+            <feComponentTransfer in="desat" result="brighter">
+                <feFuncR type="linear" slope="1"/>
+                <feFuncG type="linear" slope="1"/>
+                <feFuncB type="linear" slope="1"/>
+            </feComponentTransfer>
+        </filter>
+        <filter id="color">
+            <feColorMatrix in="SourceGraphic" type="saturate" values="0.75" result="desat" />
+            <feComponentTransfer in="desat" result="brighter">
+                <feFuncR type="linear" slope="0.7"/>
+                <feFuncG type="linear" slope="0.7"/>
+                <feFuncB type="linear" slope="0.7"/>
+            </feComponentTransfer>
+            <feComponentTransfer in="brighter" result="contrast">
+                <feFuncR type="linear" slope="1.4" intercept="0"/>
+                <feFuncG type="linear" slope="1.4" intercept="0"/>
+                <feFuncB type="linear" slope="1.4" intercept="0"/>
+            </feComponentTransfer>
+        </filter>
+
+        <path id="area1" d="M 828.824219 385.890625 L 734.199219 456.539062 L 781.296875 539.445312 L 865.390625 587.175781 L 865.390625 381.015625 C 865.390625 381.015625 850.460938 381.628906 828.824219 385.890625 "/>
+        <path id="area2" d="M 734.199219 456.539062 L 682.117188 557.898438 L 677.09375 599.164062 L 781.296875 539.445312 Z M 734.199219 456.539062 "/>
+        <path id="area3" d="M 789.824219 725.90625 L 812.375 803.296875 L 836.746094 796.597656 L 789.214844 633.898438 Z M 789.824219 725.90625 "/>
+        <path id="area4" d="M 865.386719 587.175781 L 781.296875 539.445312 L 747.167969 593.679688 L 789.214844 633.898438 L 836.746094 796.597656 L 865.386719 810.234375 Z M 865.386719 587.175781 "/>
+        <path id="area5" d="M 770.328125 661.316406 L 741.6875 641.816406 L 727.671875 606.476562 L 705.734375 599.164062 L 747.167969 593.679688 L 781.296875 539.445312 L 677.09375 599.164062 L 702.078125 635.722656 L 699.644531 690.566406 L 769.109375 774.660156 L 789.824219 725.90625 Z M 770.328125 661.316406 "/>
+        <path id="area6" d="M 830.652344 804.515625 L 812.375 803.296875 L 789.824219 725.90625 L 769.109375 774.660156 L 778.859375 840.46875 L 836.140625 890.4375 L 865.386719 890.4375 L 865.386719 837.417969 Z M 830.652344 804.515625 "/>
+        <path id="area7" d="M 901.949219 385.890625 L 996.574219 456.539062 L 949.476562 539.445312 L 865.386719 587.175781 L 865.386719 381.015625 C 865.386719 381.015625 880.316406 381.628906 901.949219 385.890625 "/>
+        <path id="area8" d="M 996.574219 456.539062 L 1048.660156 557.898438 L 1053.679688 599.164062 L 949.476562 539.445312 Z M 996.574219 456.539062 "/>
+        <path id="area9" d="M 940.949219 725.90625 L 918.398438 803.296875 L 894.027344 796.597656 L 941.558594 633.898438 Z M 940.949219 725.90625 "/>
+        <path id="area10" d="M 865.386719 587.175781 L 949.476562 539.445312 L 983.605469 593.679688 L 941.558594 633.898438 L 894.027344 796.597656 L 865.386719 810.234375 Z M 865.386719 587.175781 "/>
+        <path id="area11" d="M 960.449219 661.316406 L 989.089844 641.816406 L 1003.105469 606.476562 L 1025.039062 599.164062 L 983.605469 593.679688 L 949.476562 539.445312 L 1053.679688 599.164062 L 1028.695312 635.722656 L 1031.132812 690.566406 L 961.664062 774.660156 L 940.949219 725.90625 Z M 960.449219 661.316406 "/>
+        <path id="area12" d="M 900.121094 804.515625 L 918.398438 803.296875 L 940.949219 725.90625 L 961.664062 774.660156 L 951.917969 840.46875 L 894.636719 890.4375 L 865.386719 890.4375 L 865.386719 837.417969 Z M 900.121094 804.515625 "/>
+        <path id="area13" d="M 705.734375 599.164062 L 727.671875 606.476562 L 741.6875 641.816406 L 770.328125 661.316406 L 789.824219 725.90625 L 789.214844 633.898438 L 747.167969 593.679688 Z M 705.734375 599.164062 "/>
+        <path id="area14" d="M 940.949219 725.90625 L 960.449219 661.316406 L 989.089844 641.816406 L 1003.105469 606.476562 L 1025.039062 599.164062 L 983.605469 593.679688 L 941.558594 633.898438 Z M 940.949219 725.90625 "/>
+        <path id="area15" d="M 836.746094 796.597656 L 812.375 803.296875 L 830.652344 804.515625 L 865.386719 837.417969 L 865.386719 810.234375 Z M 836.746094 796.597656 "/>
+        <path id="area16" d="M 894.027344 796.597656 L 918.398438 803.296875 L 900.121094 804.515625 L 865.386719 837.417969 L 865.386719 810.234375 Z M 894.027344 796.597656 "/>
+        <path id="area17" d="M 546.683594 687.65625 L 546.691406 687.667969 L 596.050781 729.566406 L 645.410156 661.316406 L 585.84375 631 Z M 546.683594 687.65625 "/>
+        <path id="area18" d="M 585.84375 631 L 645.410156 661.316406 L 591.992188 502.875 Z M 585.84375 631 "/>
+        <path id="area19" d="M 499.253906 629.644531 L 546.691406 687.667969 L 573.519531 648.824219 L 549.464844 589.851562 Z M 499.253906 629.644531 "/>
+        <path id="area20" d="M 468.65625 545.425781 L 499.253906 629.644531 L 549.46875 589.851562 L 535.140625 553.570312 Z M 468.65625 545.425781 "/>
+        <path id="area21" d="M 638.230469 357.085938 L 542.007812 359.417969 L 541.960938 359.441406 L 541.871094 359.96875 L 587.417969 456.539062 L 646.863281 479.484375 Z M 638.230469 357.085938 "/>
+        <path id="area22" d="M 638.230469 357.085938 L 646.863281 479.484375 L 679.390625 547.414062 L 728.910156 451.613281 Z M 638.230469 357.085938 "/>
+        <path id="area23" d="M 464.722656 460.179688 L 545.480469 498.039062 L 587.417969 456.539062 L 542.007812 359.417969 Z M 464.722656 460.179688 "/>
+        <path id="area24" d="M 468.65625 545.425781 L 535.140625 553.570312 L 545.480469 498.039062 L 464.722656 460.179688 Z M 468.65625 545.425781 "/>
+        <path id="area25" d="M 546.683594 687.65625 L 546.667969 687.683594 L 460.125 680.429688 L 535.144531 732.136719 L 596.050781 729.566406 L 546.691406 687.667969 Z M 546.683594 687.65625 "/>
+        <path id="area26" d="M 464.722656 460.179688 L 431.628906 373.492188 L 396.953125 511.339844 L 468.65625 545.425781 Z M 464.722656 460.179688 "/>
+        <path id="area27" d="M 541.960938 359.441406 L 543.054688 259.210938 L 431.628906 373.492188 L 464.722656 460.179688 Z M 541.960938 359.441406 "/>
+        <path id="area28"
+              d="M 499.253906 629.644531 L 418.195312 592.886719 L 460.125 680.429688 L 546.683594 687.65625 Z M 499.253906 629.644531 "/>
+        <path id="area29"
+              d="M 728.910156 451.613281 L 729.105469 451.234375 L 822.613281 379.675781 L 708.339844 265.40625 L 638.230469 357.085938 Z M 728.910156 451.613281 "/>
+        <path id="area30"
+              d="M 468.65625 545.425781 L 396.953125 511.339844 L 418.195312 592.890625 L 499.253906 629.644531 Z M 468.65625 545.425781 "/>
+        <path id="area31"
+              d="M 542.011719 359.417969 L 638.230469 357.085938 L 708.339844 265.40625 L 543.054688 259.210938 L 541.960938 359.441406 Z M 542.011719 359.417969 "/>
+        <path id="area32"
+              d="M 546.683594 687.65625 L 546.691406 687.667969 L 596.050781 729.566406 L 645.410156 661.316406 L 585.84375 631 Z M 546.683594 687.65625 "/>
+        <path id="area33" d="M 585.84375 631 L 645.410156 661.316406 L 591.992188 502.875 Z M 585.84375 631 "/>
+        <path id="area34"
+              d="M 1188.769531 359.417969 L 1143.359375 456.539062 L 1185.296875 498.039062 L 1266.054688 460.179688 Z M 1188.769531 359.417969 "/>
+        <path id="area35"
+              d="M 1231.523438 629.644531 L 1184.085938 687.667969 L 1157.257812 648.824219 L 1181.308594 589.851562 Z M 1231.523438 629.644531 "/>
+        <path id="area36"
+              d="M 1262.121094 545.425781 L 1231.523438 629.644531 L 1181.308594 589.851562 L 1195.636719 553.570312 Z M 1262.121094 545.425781 "/>
+        <path id="area37"
+              d="M 1262.121094 545.425781 L 1195.636719 553.570312 L 1185.296875 498.039062 L 1266.054688 460.179688 Z M 1262.121094 545.425781 "/>
+        <path id="area38"
+              d="M 1092.542969 357.085938 L 1188.769531 359.417969 L 1188.8125 359.441406 L 1188.90625 359.96875 L 1143.359375 456.539062 L 1083.910156 479.484375 Z M 1092.542969 357.085938 "/>
+        <path id="area39"
+              d="M 1092.542969 357.085938 L 1083.910156 479.484375 L 1051.386719 547.414062 L 1001.867188 451.613281 Z M 1092.542969 357.085938 "/>
+        <path id="area40"
+              d="M 1184.089844 687.65625 L 1184.109375 687.683594 L 1270.652344 680.429688 L 1195.628906 732.136719 L 1134.722656 729.566406 L 1184.085938 687.667969 Z M 1184.089844 687.65625 "/>
+        <path id="area41"
+              d="M 1266.054688 460.179688 L 1299.148438 373.492188 L 1333.820312 511.339844 L 1262.121094 545.425781 Z M 1266.054688 460.179688 "/>
+        <path id="area42"
+              d="M 1188.8125 359.441406 L 1187.722656 259.210938 L 1299.148438 373.492188 L 1266.054688 460.179688 Z M 1188.8125 359.441406 "/>
+        <path id="area43"
+              d="M 1231.523438 629.644531 L 1312.578125 592.886719 L 1270.652344 680.429688 L 1184.089844 687.65625 Z M 1231.523438 629.644531 "/>
+        <path id="area44"
+              d="M 1001.867188 451.613281 L 1001.667969 451.234375 L 908.164062 379.675781 L 1022.433594 265.40625 L 1092.542969 357.085938 Z M 1001.867188 451.613281 "/>
+        <path id="area45"
+              d="M 1262.121094 545.425781 L 1333.820312 511.339844 L 1312.578125 592.890625 L 1231.523438 629.644531 Z M 1262.121094 545.425781 "/>
+        <path id="area46"
+              d="M 1188.769531 359.417969 L 1092.542969 357.085938 L 1022.433594 265.40625 L 1187.722656 259.210938 L 1188.8125 359.441406 Z M 1188.769531 359.417969 "/>
+        <path id="area47"
+              d="M 1184.089844 687.65625 L 1184.085938 687.667969 L 1134.722656 729.566406 L 1085.367188 661.316406 L 1144.929688 631 Z M 1184.089844 687.65625 "/>
+        <path id="area48" d="M 1144.929688 631 L 1085.367188 661.316406 L 1138.78125 502.875 Z M 1144.929688 631 "/>
+
+        <clipPath id="clip1">
+            <use xlink:href="#area1"/>
+        </clipPath>
+        <clipPath id="clip2">
+            <use xlink:href="#area2"/>
+        </clipPath>
+        <clipPath id="clip3">
+            <use xlink:href="#area3"/>
+        </clipPath>
+        <clipPath id="clip4">
+            <use xlink:href="#area4"/>
+        </clipPath>
+        <clipPath id="clip5">
+            <use xlink:href="#area5"/>
+        </clipPath>
+        <clipPath id="clip6">
+            <use xlink:href="#area6"/>
+        </clipPath>
+        <clipPath id="clip7">
+            <use xlink:href="#area7"/>
+        </clipPath>
+        <clipPath id="clip8">
+            <use xlink:href="#area8"/>
+        </clipPath>
+        <clipPath id="clip9">
+            <use xlink:href="#area9"/>
+        </clipPath>
+        <clipPath id="clip10">
+            <use xlink:href="#area10"/>
+        </clipPath>
+        <clipPath id="clip11">
+            <use xlink:href="#area11"/>
+        </clipPath>
+        <clipPath id="clip12">
+            <use xlink:href="#area12"/>
+        </clipPath>
+        <clipPath id="clip13">
+            <use xlink:href="#area13"/>
+        </clipPath>
+        <clipPath id="clip14">
+            <use xlink:href="#area14"/>
+        </clipPath>
+        <clipPath id="clip15">
+            <use xlink:href="#area15"/>
+        </clipPath>
+        <clipPath id="clip16">
+            <use xlink:href="#area16"/>
+        </clipPath>
+        <clipPath id="clip17">
+            <use xlink:href="#area17"/>
+        </clipPath>
+        <clipPath id="clip18">
+            <use xlink:href="#area18"/>
+        </clipPath>
+        <clipPath id="clip19">
+            <use xlink:href="#area19"/>
+        </clipPath>
+        <clipPath id="clip20">
+            <use xlink:href="#area20"/>
+        </clipPath>
+        <clipPath id="clip21">
+            <use xlink:href="#area21"/>
+        </clipPath>
+        <clipPath id="clip22">
+            <use xlink:href="#area22"/>
+        </clipPath>
+        <clipPath id="clip23">
+            <use xlink:href="#area23"/>
+        </clipPath>
+        <clipPath id="clip24">
+            <use xlink:href="#area24"/>
+        </clipPath>
+        <clipPath id="clip25">
+            <use xlink:href="#area25"/>
+        </clipPath>
+        <clipPath id="clip26">
+            <use xlink:href="#area26"/>
+        </clipPath>
+        <clipPath id="clip27">
+            <use xlink:href="#area27"/>
+        </clipPath>
+        <clipPath id="clip28">
+            <use xlink:href="#area28"/>
+        </clipPath>
+        <clipPath id="clip29">
+            <use xlink:href="#area29"/>
+        </clipPath>
+        <clipPath id="clip30">
+            <use xlink:href="#area30"/>
+        </clipPath>
+        <clipPath id="clip31">
+            <use xlink:href="#area31"/>
+        </clipPath>
+        <clipPath id="clip32">
+            <use xlink:href="#area32"/>
+        </clipPath>
+        <clipPath id="clip33">
+            <use xlink:href="#area33"/>
+        </clipPath>
+        <clipPath id="clip34">
+            <use xlink:href="#area34"/>
+        </clipPath>
+        <clipPath id="clip35">
+            <use xlink:href="#area35"/>
+        </clipPath>
+        <clipPath id="clip36">
+            <use xlink:href="#area36"/>
+        </clipPath>
+        <clipPath id="clip37">
+            <use xlink:href="#area37"/>
+        </clipPath>
+        <clipPath id="clip38">
+            <use xlink:href="#area38"/>
+        </clipPath>
+        <clipPath id="clip39">
+            <use xlink:href="#area39"/>
+        </clipPath>
+        <clipPath id="clip40">
+            <use xlink:href="#area40"/>
+        </clipPath>
+        <clipPath id="clip41">
+            <use xlink:href="#area41"/>
+        </clipPath>
+        <clipPath id="clip42">
+            <use xlink:href="#area42"/>
+        </clipPath>
+        <clipPath id="clip43">
+            <use xlink:href="#area43"/>
+        </clipPath>
+        <clipPath id="clip44">
+            <use xlink:href="#area44"/>
+        </clipPath>
+        <clipPath id="clip45">
+            <use xlink:href="#area45"/>
+        </clipPath>
+        <clipPath id="clip46">
+            <use xlink:href="#area46"/>
+        </clipPath>
+        <clipPath id="clip47">
+            <use xlink:href="#area47"/>
+        </clipPath>
+        <clipPath id="clip48">
+            <use xlink:href="#area48"/>
+        </clipPath>
+    </defs>
+    <g id="surface1">
+        <!-- stupid chrome creates artifacts with noise filter -->
+        <use class="usepath" clip-path="url(#clip1)" xlink:href="#area1"/>
+        <use class="usepath" clip-path="url(#clip2)" xlink:href="#area2"/>
+        <use class="usepath" clip-path="url(#clip3)" xlink:href="#area3"/>
+        <use class="usepath" clip-path="url(#clip4)" xlink:href="#area4"/>
+        <use class="usepath" clip-path="url(#clip5)" xlink:href="#area5"/>
+        <use class="usepath" clip-path="url(#clip6)" xlink:href="#area6"/>
+        <use class="usepath" clip-path="url(#clip7)" xlink:href="#area7"/>
+        <use class="usepath" clip-path="url(#clip8)" xlink:href="#area8"/>
+        <use class="usepath" clip-path="url(#clip9)" xlink:href="#area9"/>
+        <use class="usepath" clip-path="url(#clip10)" xlink:href="#area10"/>
+        <use class="usepath" clip-path="url(#clip11)" xlink:href="#area11"/>
+        <use class="usepath" clip-path="url(#clip12)" xlink:href="#area12"/>
+        <use class="usepath" clip-path="url(#clip13)" xlink:href="#area13"/>
+        <use class="usepath" clip-path="url(#clip14)" xlink:href="#area14"/>
+        <use class="usepath" clip-path="url(#clip15)" xlink:href="#area15"/>
+        <use class="usepath" clip-path="url(#clip16)" xlink:href="#area16"/>
+        <use class="usepath" clip-path="url(#clip17)" xlink:href="#area17"/>
+        <use class="usepath" clip-path="url(#clip18)" xlink:href="#area18"/>
+        <use class="usepath" clip-path="url(#clip19)" xlink:href="#area19"/>
+        <use class="usepath" clip-path="url(#clip20)" xlink:href="#area20"/>
+        <use class="usepath" clip-path="url(#clip21)" xlink:href="#area21"/>
+        <use class="usepath" clip-path="url(#clip22)" xlink:href="#area22"/>
+        <use class="usepath" clip-path="url(#clip23)" xlink:href="#area23"/>
+        <use class="usepath" clip-path="url(#clip24)" xlink:href="#area24"/>
+        <use class="usepath" clip-path="url(#clip25)" xlink:href="#area25"/>
+        <use class="usepath" clip-path="url(#clip26)" xlink:href="#area26"/>
+        <use class="usepath" clip-path="url(#clip27)" xlink:href="#area27"/>
+        <use class="usepath" clip-path="url(#clip28)" xlink:href="#area28"/>
+        <use class="usepath" clip-path="url(#clip29)" xlink:href="#area29"/>
+        <use class="usepath" clip-path="url(#clip30)" xlink:href="#area30"/>
+        <use class="usepath" clip-path="url(#clip31)" xlink:href="#area31"/>
+        <use class="usepath" clip-path="url(#clip32)" xlink:href="#area32"/>
+        <use class="usepath" clip-path="url(#clip33)" xlink:href="#area33"/>
+        <use class="usepath" clip-path="url(#clip34)" xlink:href="#area34"/>
+        <use class="usepath" clip-path="url(#clip35)" xlink:href="#area35"/>
+        <use class="usepath" clip-path="url(#clip36)" xlink:href="#area36"/>
+        <use class="usepath" clip-path="url(#clip37)" xlink:href="#area37"/>
+        <use class="usepath" clip-path="url(#clip38)" xlink:href="#area38"/>
+        <use class="usepath" clip-path="url(#clip39)" xlink:href="#area39"/>
+        <use class="usepath" clip-path="url(#clip40)" xlink:href="#area40"/>
+        <use class="usepath" clip-path="url(#clip41)" xlink:href="#area41"/>
+        <use class="usepath" clip-path="url(#clip42)" xlink:href="#area42"/>
+        <use class="usepath" clip-path="url(#clip43)" xlink:href="#area43"/>
+        <use class="usepath" clip-path="url(#clip44)" xlink:href="#area44"/>
+        <use class="usepath" clip-path="url(#clip45)" xlink:href="#area45"/>
+        <use class="usepath" clip-path="url(#clip46)" xlink:href="#area46"/>
+        <use class="usepath" clip-path="url(#clip47)" xlink:href="#area47"/>
+        <use class="usepath" clip-path="url(#clip48)" xlink:href="#area48"/>
+    </g>
+</svg>

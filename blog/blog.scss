@@ -1,0 +1,15 @@
+---
+# Use a comment to ensure Jekyll reads the file to be transformed into CSS later
+# only main files contain this front matter, not partials.
+---
+
+@import "blog/base";
+@import "blog/type";
+@import "blog/syntax";
+@import "blog/code";
+@import "blog/layout";
+@import "blog/cards";
+@import "blog/masthead";
+@import "blog/posts";
+@import "blog/pagination";
+@import "blog/message";

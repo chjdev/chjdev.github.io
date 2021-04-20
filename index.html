@@ -1,4 +1,815 @@
 ---
-layout: home
-title: Home
+title: chjdev
 ---
+
+<!DOCTYPE html>
+<html lang="en">
+<!--
+        __      _     __
+  _____/ /_    (_)___/ /__ _   __
+ / ___/ __ \  / / __  / _ \ | / /
+/ /__/ / / / / / /_/ /  __/ |/ /
+\___/_/ /_/_/ /\__,_/\___/|___/
+         /___/
+
+Greetings traveler! You have reached the webzone of chjdev!
+Since you're snooping around here I
+figure you're interested in the source code?  If so, head over to:
+https://github.com/chjdev/chjdev.github.io
+
+You'll probably be also interested in: https://www.bootstrapdash.com/product/simple-landing-page/
+-->
+<head>
+    <title>chjdev - your freelance software engineer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="http://gmpg.org/xfn/11" rel="profile" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+    <meta property="og:site_name" content="chjdev" />
+    <link rel="author" href="https://chjdev.com" />
+    <meta name="twitter:site" content="@chjdev" />
+    <meta name="twitter:creator" content="@chjdev" />
+    <link rel="canonical" href="{{ site.url }}" />
+    <meta property="og:url" content="{{ site.url }}" />
+    <meta name="twitter:url" content="{{ site.url }}" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta property="og:title" content="chjdev" />
+    <meta name="twitter:title" content="chjdev" />
+    <meta name="description" content="chjdev is your freelance software engineer. No headaches, just results!" />
+    <meta property="og:description" content="chjdev is your freelance software engineer. No headaches, just results!" />
+    <meta name="twitter:description" content="chjdev is your freelance software engineer. No headaches, just results!" />
+    <meta property="og:image" content="{{ site.url }}/images/logo.png" />
+    <meta name="twitter:image:src" content="{{ site.url }}/images/logo.png" />
+
+    <link rel="stylesheet" href="vendors/owl-carousel/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendors/owl-carousel/css/owl.theme.default.css">
+    <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="vendors/aos/css/aos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.10.1/devicon.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css">
+    <link rel="preload" as="image" href="/images/logo.svg">
+    <link rel="preload" as="image" href="/images/visalyze_browser.png">
+    <link rel="preload" as="image" href="/images/dppr_browser.png">
+    <link rel="preload" as="image" href="/images/eev.png">
+    <link rel="preload" as="image" href="/images/juno_browser.png">
+    <link rel="preload" as="image" href="/images/exchange_browser.png">
+    <link rel="preload" as="image" href="/images/admin_browser.png">
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org/",
+            "@type": "Person",
+            "name": "Christian Junker",
+            "honorificSuffix": "M.Sc.",
+            "gender": "male",
+            "jobTitle": "Freelance Software Engineer",
+            "workLocation": "Austria",
+            "url": "https://chjdev.com",
+            "image": "{{ site.url }}/images/portrait.jpg",
+            "sameAs": [
+                "https://www.twitter.com/chjdev",
+                "https://www.linkedin.com/in/chjdev"
+            ]
+        }
+    </script>
+</head>
+<body id="body" data-spy="scroll" data-target=".navbar" data-offset="100">
+<header id="header-section">
+    <nav class="navbar navbar-expand-lg pl-3 pl-sm-0" id="navbar">
+        <div class="container">
+            <div class="navbar-brand-wrapper d-flex w-100">
+                <div class="logo">
+                    <object class="logo-img" type="image/svg+xml" data="images/logo.svg"></object>
+                    <span class="logo-text">chjdev.com</span>
+                </div>
+                <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="mdi mdi-menu navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse navbar-menu-wrapper" id="navbarSupportedContent">
+                <ul class="navbar-nav align-items-lg-center align-items-start ml-auto">
+                    <li class="d-flex align-items-center justify-content-between pl-4">
+                        <div class="navbar-collapse-logo">
+                            <div class="logo logo-small">
+                                <object class="logo-img" type="image/svg+xml" data="images/logo.svg"></object>
+                                <span class="logo-text">chjdev.com</span>
+                            </div>
+                        </div>
+                        <button class="navbar-toggler close-button" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="mdi mdi-close navbar-toggler-icon pl-4"></span>
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#header-section">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features-section">Offers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#workflow-section">Workflow</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pricing-section">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tech-stack-section">Stack</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#feedback-section">Testimonials</a>
+                    </li>
+                    <li class="nav-item get-in-touch-nav text-nowrap pl-4">
+                        <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/chjdev/kickstart'});return false;">
+                            <button class="btn btn-opacity-light w-100">Book Free Session</button>
+                        </a>
+                        <a href="mailto:?to=Christian%3cinfo@chjdev.com%3e&subject=I%20need%20a%20solution!">
+                            <button class="btn btn-opacity-success w-100">Get In Touch</button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="banner row no-gutters align-items-stretch pb-5">
+    <div class="col-md-2"></div>
+    <div class="col-12 col-md-8 row justify-content-center m-0">
+        <div class="col-12 col-xl-6">
+            <img style="max-width: 15rem; border-radius: 50%;filter: drop-shadow(0px 0px 2px darkgray);"
+                 src="images/portrait.jpg" alt="christian's mug"/>
+            <h1 class="font-weight-semibold pt-3">Hi, I'm Christian!</h1>
+            <h3 class="font-weight-normal pb-3">Your Freelance Software Engineer</h3>
+        </div>
+        <div class="slider col-12 col-xl-6 pb-3"></div>
+    </div>
+    <div class="col-md-2"></div>
+    <div class="col-12 col-md-8 m-auto pl-3 pr-3">
+        <h5 class="font-weight-normal text-muted row flex-row pb-3">
+            <span class="col-xs-12 col-lg-4">⭐ M.Sc. in Computer Science</span>
+            <span class="col-xs-12 col-lg-4">⭐ 10+ Years Professional Experience</span>
+            <span class="col-xs-12 col-lg-4">⭐️ Serial Entrepreneur</span>
+        </h5>
+        <h6 class="font-weight-normal text-muted text-justify pb-3">
+            I have a passion for software since I was a kid. In high school I spearheaded a student initiative to learn
+            coding in C instead of just clicking around in MS Word. I graduated university with honors and qualified for
+            multiple merit scholarships. Worked myself up to CTO in my very first job. Walked 2500km from Austria to Spain
+            and travelled the world. Started two of my own startups with successful public and private funding rounds...
+        </h6>
+        <h5 class="font-weight-normal text-muted text-center pb-4">
+        And now I'm <strong>solving your problems</strong>!
+        </h5>
+
+        <div id="get-in-touch">
+            <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/chjdev/kickstart'});return false;">
+                <button class="btn btn-opacity-light mr-1">Book Free Session</button>
+            </a>
+            <a href="mailto:?to=Christian%3cinfo@chjdev.com%3e&subject=I%20need%20a%20solution!">
+                <button class="btn btn-opacity-success ml-1">Get In Touch</button>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="content-wrapper">
+    <div class="container">
+        <section class="features-overview" id="features-section">
+            <div class="content-header">
+                <h2>I'm Building</h2>
+            </div>
+            <ul class="list-unstyled row grid-margin">
+                <li class="d-flex flex-column align-items-stretch col-12 col-md-6 col-lg-3 mb-3 mb-lg-0"
+                    data-aos="fade-left">
+                    <div class="feature-img"
+                         style="background-image: url(images/drawkit-grape-pack-illustration-14.svg);"></div>
+                    <h5 class="py-3 text-center">Your Apps</h5>
+                    <p class="text-muted"><span class="quicklist">🌐</span> You need a new <strong>website</strong>?</p>
+                    <p class="text-muted"><span class="quicklist">📱</span> Or maybe a <strong>mobile app</strong>?</p>
+                    <p class="text-muted"><span class="quicklist">💻</span> You want to bring your solution to the <strong>desktop</strong>?</p>
+                    <p class="text-muted">
+                        Using cutting edge technologies we will get your product into the hands of your customers wherever they are!
+                    </p>
+                    <p class="text-muted">
+                        <a class="tag" target="_blank" href="https://reactjs.org">react</a>
+                        <a class="tag" target="_blank" href="https://reactnative.dev">react-native</a>
+                        <a class="tag" target="_blank" href="https://angular.io">angular</a>
+                        <a class="tag" target="_blank" href="https://www.electronjs.org">electron</a>
+                        <a class="tag" target="_blank" href="https://www.apple.com/ios/">ios</a>
+                        <a class="tag" target="_blank" href="https://www.android.com/">android</a>
+                        <a class="tag" target="_blank" href="https://flutter.dev">flutter</a>
+                        <a class="tag" target="_blank" href="https://www.typescriptlang.org">typescript</a>
+                        <a class="tag" target="_blank" href="https://developer.apple.com/xcode/swiftui/">swiftui</a>
+                    </p>
+                </li>
+                <li class="d-flex flex-column align-items-stretch col-12 col-md-6 col-lg-3 mb-3 mb-lg-0"
+                    data-aos="fade-left" data-aos-delay="200">
+                    <div class="feature-img"
+                         style="background-image: url(images/drawkit-grape-pack-illustration-10.svg);"></div>
+                    <h5 class="py-3 text-center">Your SaaS</h5>
+                    <p class="text-muted"><span class="quicklist">🚀</span> You need to <strong>scale</strong>?</p>
+                    <p class="text-muted"><span class="quicklist">❤️</span> You want to provide an <strong>API</strong> developers will love?</p>
+                    <p class="text-muted"><span class="quicklist">🧱</span> A <strong>rock solid</strong> backbone for your product?</p>
+                    <p class="text-muted">
+                        We'll build on the shoulders of giants and use battle tested technologies that can handle anything
+                        you throw at them!
+                    </p>
+                    <p class="text-muted">
+                        <a class="tag" target="_blank" href="https://www.elastic.co/elasticsearch/">elasticsearch</a>
+                        <a class="tag" target="_blank" href="https://www.postgresql.org">postgresql</a>
+                        <a class="tag" target="_blank" href="http://lambda-architecture.net">graphql</a>
+                        <a class="tag" target="_blank" href="https://graphql.org">openapi</a>
+                        <a class="tag" target="_blank" href="https://spring.io/projects/spring-boot">springboot</a>
+                        <a class="tag" target="_blank" href="https://fastapi.tiangolo.com">fastapi</a>
+                        <a class="tag" target="_blank" href="http://lambda-architecture.net">lambda-arch</a>
+                        <a class="tag" target="_blank" href="https://aws.amazon.com">aws</a>
+                        <a class="tag" target="_blank" href="https://en.wikipedia.org/wiki/Continuous_integration">ci</a>
+                        <a class="tag" target="_blank" href="http://docker.com">docker</a>
+                        <a class="tag" target="_blank" href="https://kubernetes.io">kubernetes</a>
+                    </p>
+                </li>
+                <li class="d-flex flex-column align-items-stretch col-12 col-md-6 col-lg-3 mb-3 mb-lg-0"
+                    data-aos="fade-right" data-aos-delay="200">
+                    <div class="feature-img"
+                         style="background-image: url(images/drawkit-grape-pack-illustration-17.svg);"></div>
+                    <h5 class="py-3 text-center">Your Unicorn</h5>
+                    <p class="text-muted">
+                        You're startup is building the Airbnb of cat streaming ride shares on the blockchain?
+                    </p>
+                    <p class="text-muted">
+                        Sounds awesome! Let me help you with my experience and let's build an MVP that will launch
+                        you to the moon!
+                    </p>
+                    <p class="text-muted">
+                        <a class="tag" target="_blank" href="#pricing-section">code4equity</a>
+                        <a class="tag" target="_blank" href="https://www.aha.io/roadmapping/guide/plans/what-is-a-minimum-viable-product">mvp</a>
+                        <a class="tag" target="_blank" href="https://www.aha.io/roadmapping/guide/plans/what-is-a-minimum-lovable-product">mlp</a>
+                        <a class="tag" target="_blank" href="https://en.wikipedia.org/wiki/Business_Model_Canvas">canvas</a>
+                        <a class="tag" target="_blank" href="https://en.wikipedia.org/wiki/SWOT_analysis">swot</a>
+                        <a class="tag" target="_blank" href="https://en.wikipedia.org/wiki/Unique_selling_proposition">uvp</a>
+                        <a class="tag" target="_blank" href="http://theleanstartup.com">lean startup</a>
+                        <a class="tag" target="_blank" href="https://www.ffg.at">funding</a>
+                    </p>
+                </li>
+                <li class="d-flex flex-column align-items-stretch col-12 col-md-6 col-lg-3 mb-3 mb-lg-0"
+                    data-aos="fade-right">
+                    <div class="feature-img"
+                         style="background-image: url(images/drawkit-grape-pack-illustration-7.svg);"></div>
+                    <h5 class="py-3 text-center">Hmm...</h5>
+                    <p class="text-muted"> Not exactly what you're looking for? Or not sure where to start? </p>
+                    <p class="text-muted">
+                        Just <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/chjdev/kickstart'});return false;">book a free session</a>
+                        and let's talk about how I can help you! </p>
+                    <p class="text-muted "> If it <strong>can</strong> be built, it <strong>will</strong> be built! </p>
+                </li>
+            </ul>
+        </section>
+        <section class="workflow" id="workflow-section">
+            <div class="content-header">
+                <h2>How Does It Work?</h2>
+                <h6 class="section-subtitle text-muted m-0">Your road to success</h6>
+            </div>
+            <div class="row align-items-center grid-margin">
+                <div class="col-12 col-lg-5" data-aos="fade-right">
+                    <img src="images/drawkit-grape-pack-illustration-4.svg" alt="consulting"
+                         class="img-fluid img-workflow img-workflow-top">
+                    <h3 class="m-0">Everything Starts with a<br/> Free Consulting Session</h3>
+                    <p class="py-4 m-0 text-muted">
+                        Here we will get to know each other and talk about your idea. Maybe you already have something
+                        specific in mind? Or maybe you need a bit of help fleshing things out? No strings attached,
+                        <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/chjdev/kickstart'});return false;">
+                        let's have a chat
+                        </a>!
+                    </p>
+                    <p class="font-weight-medium text-muted">
+                        After this session we will have a good idea on what you want to achieve and whether we are a
+                        good fit. If you'd like to proceed you will...
+                    </p>
+                </div>
+                <div class="col-12 col-lg-7 p-0 img-digital text-center" data-aos="fade-left">
+                    <img src="images/drawkit-grape-pack-illustration-4.svg" alt="consulting"
+                         class="img-fluid img-workflow">
+                </div>
+            </div>
+            <div class="row align-items-center grid-margin">
+                <div class="col-12 col-lg-7 text-center flex-item" data-aos="fade-right">
+                    <img src="images/drawkit-grape-pack-illustration-2.svg" alt="case-study"
+                         class="img-fluid img-workflow">
+                </div>
+                <div class="col-12 col-lg-5 flex-item" data-aos="fade-left">
+                    <img src="images/drawkit-grape-pack-illustration-2.svg" alt="case-study"
+                         class="img-fluid img-workflow img-workflow-top mb-2">
+                    <h3 class="m-0">Get a Free<sup class="text-muted">*</sup> Case Study</h3>
+                    <p class="py-4 m-0 text-muted">
+                        The next step on our journey is a case study in which I will write up what we talked about
+                        in our session and provide a more concrete outline of the project. We can iterate on this
+                        until you are fully satisfied.
+                    </p>
+                    <p class="font-weight-medium text-muted">
+                        This document will lay the foundation for the project, giving you a better overview on
+                        the scope and necessary steps of the project.
+                    </p>
+                    <p class="py-2 m-0 text-muted font-italic small">
+                        * To protect myself against bad-faith offers the case study is billed initially but will be
+                        fully reimbursed via a rebate on the final bill.
+                    </p>
+                </div>
+            </div>
+            <div class="row align-items-center grid-margin">
+                <div class="col-12 col-lg-5" data-aos="fade-right">
+                    <img src="images/drawkit-grape-pack-illustration-15.svg" alt="consulting"
+                         class="img-fluid img-workflow img-workflow-top">
+                    <h3 class="m-0">Watch Your Dreams<br/>Become Reality!</h3>
+                    <p class="py-4 m-0 text-muted">
+                        Once we agree on the project outline and sign the contract I will start working on the project.
+                        We'll have tight feedback loops where I'll keep you updated on the current status and where
+                        we iron out potential misunderstandings before they even happen.
+                    </p>
+                    <p class="pb-4 m-0 text-muted">
+                        You decide how involved you want to be, from informal zoom sessions, to full SCRUM sprints, we
+                        will find a schedule that works best for you.
+                    </p>
+                    <p class="font-weight-medium text-muted">
+                        Sit back, relax and watch your dreams take shape before your eyes!
+                    </p>
+                </div>
+                <div class="col-12 col-lg-7 p-0 img-digital text-center" data-aos="fade-left">
+                    <img src="images/drawkit-grape-pack-illustration-15.svg" alt="consulting"
+                         class="img-fluid img-workflow">
+                </div>
+            </div>
+        </section>
+        <section class="tech-stack" id="pricing-section">
+            <div class="content-header">
+                <h2>Pricing</h2>
+                <h6 class="section-subtitle text-muted m-0">Fairness and Transparency. Choose the model that suits you best.</h6>
+            </div>
+            <ul class="list-unstyled row grid-margin">
+                <li class="d-flex flex-column align-items-stretch col-12 col-md-6 col-lg-3 mb-3 mb-lg-0"
+                    data-aos="fade-left" data-aos-delay="0">
+                    <span class="pricing-icon mdi mdi-timer text-info"></span>
+                    <h5 class="text-center">Hourly Rate</h5>
+                    <h6 class="py-3 text-center text-muted">&euro; 110.-</h6>
+                    <p class="text-muted">
+                        Easy, <strong>flexible</strong> and hassle-free. The most popular choice for many projects.
+                        You have full control over your costs and can stop anytime. You only pay for the amount of hours
+                        you actually used!
+                    </p>
+                </li>
+                <li class="d-flex flex-column align-items-stretch col-12 col-md-6 col-lg-3 mb-3 mb-lg-0"
+                    data-aos="fade-left" data-aos-delay="200">
+                    <span class="pricing-icon mdi mdi-apps text-primary"></span>
+                    <h5 class="text-center">Project Based</h5>
+                    <h6 class="py-3 text-center text-muted">Flat Rate</h6>
+                    <p class="text-muted">
+                        The <strong>economical</strong> choice. Best option for clearly defined projects. In exchange for you committing to
+                        the full project up front, I can offer a more economical rate due to the increased planning security.
+                    </p>
+                </li>
+                <li class="d-flex flex-column align-items-stretch col-12 col-md-6 col-lg-3 mb-3 mb-lg-0"
+                    data-aos="fade-right">
+                    <span class="pricing-icon mdi mdi-trending-up text-success"></span>
+                    <h5 class="text-center">Code4Equity</h5>
+                    <h6 class="py-3 text-center text-muted">Slice Of The Pie</h6>
+                    <p class="text-muted">
+                        Instead of monetary compensation I'm also willing to work for equity in your company.
+                        Just <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/chjdev/kickstart'});return false;">get in touch</a>,
+                        sell me on your idea and we'll make it happen!
+                        Great choice for <strong>startups</strong>!
+                    </p>
+                </li>
+                <li class="d-flex flex-column align-items-stretch col-12 col-md-6 col-lg-3 mb-3 mb-lg-0"
+                    data-aos="fade-right" data-aos-delay="200">
+                    <span class="pricing-icon mdi mdi-flower text-warning"></span>
+                    <h5 class="text-center">Non Profit</h5>
+                    <h6 class="py-3 text-center text-muted">🤝</h6>
+                    <p class="text-muted">
+                        I'm open for all kinds of <strong>non profit</strong> work! Maybe a workshop for kids? Guest lecture
+                        about an exciting topic? You run an NGO and need help?
+                        Just <a href="mailto:?to=Christian%3cinfo@chjdev.com%3e&subject=Non%20Profit%20Work">get in touch</a>
+                        and we'll see if we can make it happen!
+                    </p>
+                </li>
+            </ul>
+        </section>
+        <section class="tech-stack" id="tech-stack-section">
+            <div class="row grid-margin">
+                <div class="col-12 text-center pb-5">
+                    <h2>My Tech Stack</h2>
+                    <h6 class="section-subtitle text-muted">
+                        Each project is different, but at least one of these usually ends up as part of the stack.
+                    </h6>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 stretch-card" data-aos="zoom-in">
+                    <div class="card color-cards">
+                        <div class="card-body p-0">
+                            <div class="bg-ts text-center card-contents">
+                                <a href="https://www.typescriptlang.org">
+                                    <div class="card-image">
+                                        <i class="stack-icon devicon-typescript-plain"></i>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-details text-center pt-4">
+                                <h6 class="m-0 pb-1">TypeScript</h6>
+                                <p>
+                                    Whether in the browser, on mobile devices, or on the server... JavaScript is omnipresent!<br/>
+                                    <span class="small">(And with types actually usable.)</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 stretch-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="card color-cards">
+                        <div class="card-body p-0">
+                            <div class="bg-python text-center card-contents">
+                                <a href="https://www.python.org/">
+                                    <div class="card-image">
+                                        <i class="stack-icon devicon-python-plain"></i>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-details text-center pt-4">
+                                <h6 class="m-0 pb-1">Python</h6>
+                                <p>
+                                    It's readable, it's reliable, it's Python, and will handle anything you throw at it.<br/>
+                                    <span class="small">(Maybe runs a bit slow... but it just <a href="https://www.youtube.com/watch?v=wU9dY_4Adso" target="_blank"><i>keeps</i></a> running.)</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 stretch-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="card color-cards">
+                        <div class="card-body p-0">
+                            <div class="bg-java text-center card-contents">
+                                <a href="https://www.java.com">
+                                    <div class="card-image">
+                                        <i class="stack-icon devicon-java-plain"></i>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-details text-center pt-4">
+                                <h6 class="m-0 pb-1">Java</h6>
+                                <p>
+                                    You can't spell <i>enterprise</i> without <i>Java</i>. It's "boring" in all the best
+                                    ways.<br/>
+                                    <span class="small">(Nobody gets fired for using Java...)</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 stretch-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="card color-cards">
+                        <div class="card-body p-0">
+                            <div class="bg-docker text-center card-contents">
+                                <a href="https://www.docker.com/">
+                                    <div class="card-image">
+                                        <i class="stack-icon devicon-docker-plain"></i>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-details text-center pt-4">
+                                <h6 class="m-0 pb-1">Docker</h6>
+                                <p>
+                                    The days of the monolith are over, nowadays you'll be orchestrating at least a few
+                                    services.<br/>
+                                    <span class="small">(BuT It RUNs ON my mACHINe...)</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 stretch-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="card color-cards">
+                        <div class="card-body p-0">
+                            <div class="bg-postgres text-center card-contents">
+                                <a href="https://www.docker.com/">
+                                    <div class="card-image">
+                                        <i class="stack-icon devicon-postgresql-plain"></i>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-details text-center pt-4">
+                                <h6 class="m-0 pb-1">PostgreSQL</h6>
+                                <p>
+                                    If your problem can't be solved with postgres, you're probably solving the wrong
+                                    problem.<br/>
+                                    <span class="small">(Or maybe you're analyzing particle accelerator data?)</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 stretch-card" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="card color-cards">
+                        <div class="card-body p-0">
+                            <div class="bg-warning text-center card-contents">
+                                <div class="card-image-grid">
+                                    <i class="stack-icon-grid devicon-rust-plain"></i>
+                                    <i class="stack-icon-grid devicon-cplusplus-line"></i>
+                                    <i class="stack-icon-grid devicon-ubuntu-plain"></i>
+                                    <i class="stack-icon-grid devicon-git-plain"></i>
+                                    <i class="stack-icon-grid devicon-redis-plain"></i>
+                                    <i class="stack-icon-grid devicon-bash-plain"></i>
+                                    <i class="stack-icon-grid devicon-vim-plain"></i>
+                                </div>
+                            </div>
+                            <div class="card-details text-center pt-4">
+                                <h6 class="m-0 pb-1">Whatever it takes</h6>
+                                <p>
+                                    There's never a one size fits all solution and I love solving new challenges!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="customer-feedback" id="feedback-section">
+            <div class="row">
+                <div class="col-12 text-center pb-5">
+                    <h2>Testimonials</h2>
+                    <h6 class="section-subtitle text-muted m-0">Clients, Co-Founders, Friends</h6>
+                </div>
+                <div class="owl-carousel owl-theme">
+                    <div class="card customer-cards">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <img src="images/anna.jpg" alt="anna" class="img-customer">
+                                <p class="m-0 pt-3 text-muted">
+                                    Christian is a very intelligent and ambitious individual. He combines vast
+                                    knowledge in technical areas with a keen business sense and always judges solutions
+                                    with marketability and scalability in mind.</p>
+                                <p class="m-0 py-3" style="cursor: pointer;"
+                                   onclick="((evt) => {
+                                    evt.nextElementSibling.style.display = evt.nextElementSibling.style.display === 'block' ? 'none' : 'block';
+                                    evt.innerText = evt.innerText === 'Read More' ? 'Collapse' : 'Read More';
+                                })(this)">Read More</p>
+                                <p id="test" class="m-0 pb-3 text-muted readmore-feedback">
+                                    He always solved his tasks to the
+                                    utmost satisfaction. These included writing and managing funding proposals, research
+                                    in their respective areas and preparing materials for educational courses. He
+                                    also contributed to diverse projects in the areas of graph computing and
+                                    recommender systems. Christian fit right in with the team and was a valuable and
+                                    inspiring employee. He is very professional and always maintains a pragmatic and
+                                    solution oriented approach. Even in stressful situations he remains calm and
+                                    level-headed,and is not afraid to take charge. I can recommend Christian to any
+                                    employer without hesitation and would be happy to re-employ him. I wish him all the
+                                    best for his career and future endeavours.
+                                </p>
+                                <div class="content-divider m-auto"></div>
+                                <h6 class="card-title pt-3">Dr. Anna Fensel</h6>
+                                <h6 class="customer-designation text-muted m-0">Assoc.-Prof. STI Innsbruck</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card customer-cards">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <img src="images/marti.jpg" alt="marti" class="img-customer">
+                                <p class="m-0 pt-3 text-muted">
+                                    I came to know Christian as a very ambitious and creative person who is always keen
+                                    on optimising and challenging the status quo. At the same time, he is equally eager
+                                    to learn and incorporate new strategies.</p>
+                                <p class="m-0 py-3" style="cursor: pointer;"
+                                   onclick="((evt) => {
+                                    evt.nextElementSibling.style.display = evt.nextElementSibling.style.display === 'block' ? 'none' : 'block';
+                                    evt.innerText = evt.innerText === 'Read More' ? 'Collapse' : 'Read More';
+                                })(this)">Read More</p>
+                                <p class="m-0 pb-3 text-muted readmore-feedback">
+                                    His technical skills are outstanding and he
+                                    quickly picks up anything he sets his mind to. Christian is interested in a vast
+                                    array of topics and I have yet to find an area where he cannot lead an in depth
+                                    discussion or is able to ask informed and challenging questions.
+                                    His experience in leadership was also apparent. Whenever the occasion arose, he did
+                                    not hesitate to jump in and take charge. Christian got involved in several projects
+                                    and tasks of the institute and took responsibility for some of them. He also helped
+                                    me enormously in the preparation of several research proposals, making crucial and
+                                    very valuable contributions and assisting in the relation with external partners. He
+                                    takes on the role of a leader naturally, employing a partnership style and values
+                                    the input of every team member highly.
+                                    I am happy to recommend Christian to any employer and I would be pleased to
+                                    re-employ or otherwise collaborate with him in the future.
+                                </p>
+                                <div class="content-divider m-auto"></div>
+                                <h6 class="card-title pt-3">Dr. Martí Cuquet</h6>
+                                <h6 class="customer-designation text-muted m-0">Researcher</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card customer-cards">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <img src="images/arno.jpg" alt="arno" class="img-customer">
+                                <p class="m-0 pt-3 text-muted">
+                                    Christian had no problem to fit right in to the team. I valued Christians
+                                    professional, pragmatic and solution oriented attitude. With his vast array of
+                                    technical skills and his analytical mind he could easily tackle any problem.
+                                </p>
+                                <p class="m-0 py-3" style="cursor: pointer;"
+                                   onclick="((evt) => {
+                                    evt.nextElementSibling.style.display = evt.nextElementSibling.style.display === 'block' ? 'none' : 'block';
+                                    evt.innerText = evt.innerText === 'Read More' ? 'Collapse' : 'Read More';
+                                })(this)">Read More</p>
+                                <p class="m-0 pb-3 text-muted readmore-feedback">
+                                    During his time in the company he was tasked with evaluating new technologies and
+                                    investigating potentials for modernisation of our ETL and analytics pipeline. His
+                                    efforts culminated in a white-paper that will help us restructure core components of
+                                    our infrastructure. In addition he supported the team in monitoring and managing our
+                                    servers and services.
+                                    I have no hesitation in recommending him to any future employer and I would be
+                                    pleased to re-employ Christian. I wish him the best of luck and am eager to see
+                                    where his path will take him next.
+                                </p>
+                                <div class="content-divider m-auto"></div>
+                                <h6 class="card-title pt-3">DDr. Arno Scharl</h6>
+                                <h6 class="customer-designation text-muted m-0">Professor, Department Head</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card customer-cards">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <img src="images/christoph.jpg" alt="christoph" class="img-customer">
+                                <p class="m-0 pt-3 text-muted">
+                                    It was a joy seeing Christian's journey from visalyze's first developer, to the CTO
+                                    of the company. During his time with us I witnessed his intelligence and creativity,
+                                    as well as his professionalism and "getting it done" attitude.
+                                </p>
+                                <p class="m-0 py-3" style="cursor: pointer;"
+                                   onclick="((evt) => {
+                                    evt.nextElementSibling.style.display = evt.nextElementSibling.style.display === 'block' ? 'none' : 'block';
+                                    evt.innerText = evt.innerText === 'Read More' ? 'Collapse' : 'Read More';
+                                })(this)">Read More</p>
+                                <p class="m-0 pb-3 text-muted readmore-feedback">
+                                    He showed exceptional
+                                    technical skills and was able to quickly adapt to any challenge.
+                                    Christian was an invaluable asset in building and leading the company. In a time of
+                                    high uncertainty, his level-headedness even in the most stressful and heated
+                                    situations gave the company a lot of stability. With his calm and democratic
+                                    leadership style he cultivated an atmosphere of mutual respect throughout the whole
+                                    company. I have no hesitation in recommending him to any future employer. I would be
+                                    pleased to re-employ Christian. I can't wait to see where his path will take him and
+                                    wish him the best of luck.
+                                </p>
+                                <div class="content-divider m-auto"></div>
+                                <h6 class="card-title pt-3">Dipl. Inform. Christoph Holz</h6>
+                                <h6 class="customer-designation text-muted m-0">Entrepreneur Extraordinaire</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card customer-cards">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <img src="images/allan.jpg" alt="allan" class="img-customer">
+                                <p class="m-0 pt-3 text-muted">
+                                    I had the pleasure of working together with Christian for 2.5 years in a startup
+                                    environment and am honored to call him a friend, I have no remembrance of him
+                                    showing up with a negative attitude, which in my opinion is a very valuable asset!
+
+                                </p>
+                                <p class="m-0 py-3" style="cursor: pointer;"
+                                   onclick="((evt) => {
+                                    evt.nextElementSibling.style.display = evt.nextElementSibling.style.display === 'block' ? 'none' : 'block';
+                                    evt.innerText = evt.innerText === 'Read More' ? 'Collapse' : 'Read More';
+                                })(this)">Read More</p>
+                                <p class="m-0 pb-3 text-muted readmore-feedback">
+                                    As a professional he is very structured and patient as a team leader. Technically no
+                                    task is too big or small, and everything is not only solved satisfactory but solved
+                                    with a thought and understanding on the business efficiency as well, which is a rare
+                                    quality in engineers. I will certainly try to recruit Christian for my new business
+                                    once it is settled in!
+                                </p>
+                                <div class="content-divider m-auto"></div>
+                                <h6 class="card-title pt-3">Allan L. Hansen</h6>
+                                <h6 class="customer-designation text-muted m-0">Serial Entrepreneur</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card customer-cards">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <img src="images/flo.jpg" alt="flo" class="img-customer">
+                                <p class="m-0 pt-3 text-muted">
+                                    Christian is a brilliant mind. I've witnessed him single-handedly build a
+                                    distributed big data visualization crawling system whose ingenuity and quality is
+                                    nothing short of mind blowing.
+                                </p>
+                                <p class="m-0 py-3" style="cursor: pointer;"
+                                   onclick="((evt) => {
+                                    evt.nextElementSibling.style.display = evt.nextElementSibling.style.display === 'block' ? 'none' : 'block';
+                                    evt.innerText = evt.innerText === 'Read More' ? 'Collapse' : 'Read More';
+                                })(this)">Read More</p>
+                                <p class="m-0 pb-3 text-muted readmore-feedback">
+                                    However, what made an even longer lasting impression on me is his quiet,
+                                    professional leadership style. I always felt respected and motivated all the way
+                                    when working under his guidance.
+                                </p>
+                                <div class="content-divider m-auto"></div>
+                                <h6 class="card-title pt-3">Florian Peter</h6>
+                                <h6 class="customer-designation text-muted m-0">Software Engineering Ninja</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card customer-cards">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <img src="images/walter.jpg" alt="walter" class="img-customer">
+                                <p class="m-0 py-3 text-muted">
+                                    Christian was the first developer we hired for a startup
+                                    and we couldn't have made a better pick. He combines profound knowledge with
+                                    out-of-the-box thinking. He even finds passion in solving tasks looking mundane for
+                                    others. His open-mindedness and integrity makes him a great team player. It was both
+                                    joy and honour to work with you, Christian!
+                                </p>
+                                <div class="content-divider m-auto"></div>
+                                <h6 class="card-title pt-3">Walter Rafelsberger</h6>
+                                <h6 class="customer-designation text-muted m-0">Visualization Trail Blazer</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card customer-cards">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <img src="images/ingrid.jpg" alt="ingrid" class="img-customer">
+                                <p class="m-0 py-3 text-muted">
+                                    Ich habe Christian als sehr innovativ erlebt, dem neue Themen und Herausforderungen
+                                    reizen. Er arbeitet gewissenhaft, geht voller Elan neue Dinge an und hat die
+                                    Ausdauer dran zu bleiben, auch wenn es mal etwas schwieriger und komplexer wird als
+                                    zuerst gedacht. Nicht viel reden - lieber zielgerichtet handeln.
+                                </p>
+                                <div class="content-divider m-auto"></div>
+                                <h6 class="card-title pt-3">Ingrid Eppensteiner</h6>
+                                <h6 class="customer-designation text-muted m-0">Sales &amp; Marketing</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact-us text-center" id="contact-section">
+            <div class="content-header">
+                <h2>Convinced?</h2>
+                <h6 class="section-subtitle text-muted m-0">
+                    Get in touch and let's make your dreams a reality!
+                </h6>
+            </div>
+            <div class="grid-margin text-center">
+                <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/chjdev/kickstart'});return false;">
+                    <button class="btn btn-opacity-light mr-1">Book Free Session</button>
+                </a>
+                <a href="mailto:?to=Christian%3cinfo@chjdev.com%3e&subject=I%20need%20a%20solution!">
+                    <button class="btn btn-opacity-success ml-1">Get In Touch</button>
+                </a>
+            </div>
+        </section>
+        <section class="contact-details" id="contact-details-section">
+            <div class="row text-center">
+                <div class="col-12 col-md-4 grid-margin">
+                    <div class="logo logo-small m-auto">
+                        <object class="logo-img" type="image/svg+xml" data="images/logo.svg"></object>
+                        <span class="logo-text">chjdev.com</span>
+                    </div>
+                    <div class="pt-2">
+                        <a href="mailto:info@chjdev.com" class="text-muted m-0">info@chjdev.com</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 grid-margin">
+                    <h5 class="pb-2">Follow Me</h5>
+                    <div class="d-flex justify-content-center">
+                        <a href="https://twitter.com/chjdev"><span class="mdi mdi-twitter m-auto"></span></a>
+                        <a href="https://www.linkedin.com/in/chjdev" class="pl-1 pr-1"><span
+                                class="mdi mdi-linkedin m-auto"></span></a>
+                        <a href="https://chjdev.com/blog"><span class="mdi mdi-glasses m-auto"></span></a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 grid-margin">
+                    <h5 class="pb-2">My Location</h5>
+                    <p class="text-muted">A-6121 Baumkirchen</p>
+                </div>
+            </div>
+        </section>
+        <footer class="border-top">
+            <p class="text-center text-muted pt-4">
+                Copyright © 2021 Christian Junker. All rights reserved.
+            </p>
+        </footer>
+    </div>
+</div>
+<script src="vendors/jquery/jquery.min.js"></script>
+<script src="vendors/bootstrap/bootstrap.min.js"></script>
+<script src="vendors/owl-carousel/js/owl.carousel.min.js"></script>
+<script src="vendors/aos/js/aos.js"></script>
+<script src="js/landingpage.js"></script>
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+</body>
+</html>
