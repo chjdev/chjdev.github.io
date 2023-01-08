@@ -8,7 +8,7 @@ description:         A Collection of Programming Ramblings by chjdev
 url:                 https://chjdev.com
 enforce_ssl:         chjdev.com
 paginate:            6
-paginate_path:       "/blog/page:num"
+paginate_path:       "/blog/page:num/"
 baseurl:             ""
 plugins:
   - jekyll-paginate
@@ -31,7 +31,7 @@ sass:
 # About/contact
 author:
   name:              Christian Junker
-  url:               https://twitter.com/chjdev
+  url:               https://linkedin.com/in/chjdev/
 
 pages_list:
   Experiments: '/experiments'

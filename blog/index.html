@@ -1,5 +1,41 @@
 ---
-layout: blog
+layout: blog_default
 title: Blog
-permalink: /blog/
 ---
+
+<div class="cards">
+    {% for post in paginator.posts %}
+    <article class="card">
+        <h1 class="post-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+        <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time>
+
+        {% if post.image %}
+        {% if post.include_excerpt %}
+        <div class="card-image-excerpt">
+            <div class="card-image" style="background-image: url({{ post.image }});">&nbsp;</div>
+            <div class="card-excerpt">
+                {{ post.excerpt }}
+            </div>
+        </div>
+        {% else %}
+        <div class="card-image" style="background-image: url({{ post.image }});"/>
+        {% endif %}
+        {% else %}
+        {{ post.excerpt }}
+        {% endif %}
+    </article>
+    {% endfor %}
+</div>
+
+<div class="pagination">
+    {% if paginator.previous_page %}
+    <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>
+    {% else %}
+    <span class="pagination-item newer">Newer</span>
+    {% endif %}
+    {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
+    {% else %}
+    <span class="pagination-item older">Older</span>
+    {% endif %}
+</div>

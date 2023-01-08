@@ -97,12 +97,18 @@
   {% endif %}
     "url" : "{{ site.url }}{{ page.url }}",
     "publisher" : {
-      "@type" : "Organization",
-      "name" : "chjdev",
-      "logo" : {
-        "@type": "ImageObject",
-        "url": "{{ site.url }}/assets/logo.png"
-      }
+      "@type": "Person",
+      "name": "Christian Junker",
+      "honorificSuffix": "M.Sc.",
+      "gender": "male",
+      "jobTitle": "Freelance Software Engineer",
+      "workLocation": "Austria",
+      "url": "https://chjdev.com",
+      "image": "{{ site.url }}/images/portrait.jpg",
+      "sameAs": [
+        "https://www.twitter.com/chjdev",
+        "https://www.linkedin.com/in/chjdev"
+      ]
     }
   }
   </script>
