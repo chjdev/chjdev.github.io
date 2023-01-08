@@ -10,7 +10,7 @@ enforce_ssl:         chjdev.com
 paginate:            6
 paginate_path:       "/blog/page:num"
 baseurl:             ""
-gems:
+plugins:
   - jekyll-paginate
   - jekyll-gist
   - jekyll-redirect-from
